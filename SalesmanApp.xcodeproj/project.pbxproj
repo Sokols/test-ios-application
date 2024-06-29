@@ -11,7 +11,6 @@
 		3F7C39B02C2FE32800EDE67C /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F7C39AF2C2FE32800EDE67C /* ContentView.swift */; };
 		3F7C39B22C2FE32900EDE67C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3F7C39B12C2FE32900EDE67C /* Assets.xcassets */; };
 		3F7C39B52C2FE32900EDE67C /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3F7C39B42C2FE32900EDE67C /* Preview Assets.xcassets */; };
-		3F7C39C92C2FE32900EDE67C /* SalesmanAppUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F7C39C82C2FE32900EDE67C /* SalesmanAppUITests.swift */; };
 		3F7C39D82C2FE38600EDE67C /* README.md in Resources */ = {isa = PBXBuildFile; fileRef = 3F7C39D72C2FE38600EDE67C /* README.md */; };
 		3F7C39DF2C2FEA5000EDE67C /* Localizable.xcstrings in Resources */ = {isa = PBXBuildFile; fileRef = 3F7C39DE2C2FEA5000EDE67C /* Localizable.xcstrings */; };
 		3F7C39E32C2FED5F00EDE67C /* SalesmanDTO.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F7C39E22C2FED5F00EDE67C /* SalesmanDTO.swift */; };
@@ -41,6 +40,10 @@
 		3F7C3A452C309D9400EDE67C /* SearchSalesmenUseCaseTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F7C3A442C309D9400EDE67C /* SearchSalesmenUseCaseTests.swift */; };
 		3F7C3A472C30B05700EDE67C /* FetchSalesmansUseCaseTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F7C3A462C30B05700EDE67C /* FetchSalesmansUseCaseTests.swift */; };
 		3F7C3A492C30B08400EDE67C /* MockedSalesmansRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F7C3A482C30B08400EDE67C /* MockedSalesmansRepository.swift */; };
+		3F7C3A4F2C30B2E100EDE67C /* SalesmanAddressListViewTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F7C3A4E2C30B2E100EDE67C /* SalesmanAddressListViewTests.swift */; };
+		3F7C3A512C30B3F000EDE67C /* XCUIApplication+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F7C3A502C30B3F000EDE67C /* XCUIApplication+Extensions.swift */; };
+		3F7C3A532C30B4E900EDE67C /* AccessibilityIdentifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F7C3A522C30B4E900EDE67C /* AccessibilityIdentifier.swift */; };
+		3F7C3A542C30B6CA00EDE67C /* AccessibilityIdentifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F7C3A522C30B4E900EDE67C /* AccessibilityIdentifier.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -68,7 +71,6 @@
 		3F7C39B42C2FE32900EDE67C /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		3F7C39BA2C2FE32900EDE67C /* SalesmanAppTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SalesmanAppTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		3F7C39C42C2FE32900EDE67C /* SalesmanAppUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SalesmanAppUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		3F7C39C82C2FE32900EDE67C /* SalesmanAppUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SalesmanAppUITests.swift; sourceTree = "<group>"; };
 		3F7C39D72C2FE38600EDE67C /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 		3F7C39DE2C2FEA5000EDE67C /* Localizable.xcstrings */ = {isa = PBXFileReference; lastKnownFileType = text.json.xcstrings; path = Localizable.xcstrings; sourceTree = "<group>"; };
 		3F7C39E22C2FED5F00EDE67C /* SalesmanDTO.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SalesmanDTO.swift; sourceTree = "<group>"; };
@@ -99,6 +101,9 @@
 		3F7C3A442C309D9400EDE67C /* SearchSalesmenUseCaseTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchSalesmenUseCaseTests.swift; sourceTree = "<group>"; };
 		3F7C3A462C30B05700EDE67C /* FetchSalesmansUseCaseTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FetchSalesmansUseCaseTests.swift; sourceTree = "<group>"; };
 		3F7C3A482C30B08400EDE67C /* MockedSalesmansRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockedSalesmansRepository.swift; sourceTree = "<group>"; };
+		3F7C3A4E2C30B2E100EDE67C /* SalesmanAddressListViewTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SalesmanAddressListViewTests.swift; sourceTree = "<group>"; };
+		3F7C3A502C30B3F000EDE67C /* XCUIApplication+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "XCUIApplication+Extensions.swift"; sourceTree = "<group>"; };
+		3F7C3A522C30B4E900EDE67C /* AccessibilityIdentifier.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccessibilityIdentifier.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -182,7 +187,8 @@
 		3F7C39C72C2FE32900EDE67C /* SalesmanAppUITests */ = {
 			isa = PBXGroup;
 			children = (
-				3F7C39C82C2FE32900EDE67C /* SalesmanAppUITests.swift */,
+				3F7C3A4C2C30B2BB00EDE67C /* Presentation */,
+				3F7C3A502C30B3F000EDE67C /* XCUIApplication+Extensions.swift */,
 			);
 			path = SalesmanAppUITests;
 			sourceTree = "<group>";
@@ -363,6 +369,7 @@
 				3F7C3A152C300D0F00EDE67C /* Font+Extensions.swift */,
 				3F7C3A1F2C30157D00EDE67C /* String+Extensions.swift */,
 				3F7C3A362C30560400EDE67C /* UIApplication+Extensions.swift */,
+				3F7C3A522C30B4E900EDE67C /* AccessibilityIdentifier.swift */,
 			);
 			path = Utils;
 			sourceTree = "<group>";
@@ -448,6 +455,22 @@
 				3F7C3A482C30B08400EDE67C /* MockedSalesmansRepository.swift */,
 			);
 			path = Repositories;
+			sourceTree = "<group>";
+		};
+		3F7C3A4C2C30B2BB00EDE67C /* Presentation */ = {
+			isa = PBXGroup;
+			children = (
+				3F7C3A4D2C30B2C800EDE67C /* Salesman */,
+			);
+			path = Presentation;
+			sourceTree = "<group>";
+		};
+		3F7C3A4D2C30B2C800EDE67C /* Salesman */ = {
+			isa = PBXGroup;
+			children = (
+				3F7C3A4E2C30B2E100EDE67C /* SalesmanAddressListViewTests.swift */,
+			);
+			path = Salesman;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -608,6 +631,7 @@
 				3F7C39E82C2FEDCF00EDE67C /* SalesmansRepository.swift in Sources */,
 				3F7C3A162C300D0F00EDE67C /* Font+Extensions.swift in Sources */,
 				3F7C3A412C30663900EDE67C /* SalesmanDIContainer.swift in Sources */,
+				3F7C3A532C30B4E900EDE67C /* AccessibilityIdentifier.swift in Sources */,
 				3F7C3A1C2C30123D00EDE67C /* ContactCircleView.swift in Sources */,
 				3F7C3A232C30199D00EDE67C /* SalesmanTestData.swift in Sources */,
 			);
@@ -627,7 +651,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				3F7C39C92C2FE32900EDE67C /* SalesmanAppUITests.swift in Sources */,
+				3F7C3A512C30B3F000EDE67C /* XCUIApplication+Extensions.swift in Sources */,
+				3F7C3A542C30B6CA00EDE67C /* AccessibilityIdentifier.swift in Sources */,
+				3F7C3A4F2C30B2E100EDE67C /* SalesmanAddressListViewTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -875,6 +901,7 @@
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = "";
 				GENERATE_INFOPLIST_FILE = YES;
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = com.sokols.SalesmanAppUITests;
@@ -892,6 +919,7 @@
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = "";
 				GENERATE_INFOPLIST_FILE = YES;
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = com.sokols.SalesmanAppUITests;

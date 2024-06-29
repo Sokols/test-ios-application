@@ -70,6 +70,7 @@ struct SalesmanAddressesListView<T: SalesmanAddressesViewModel>: View {
     private var emptyView: some View {
         Spacer()
         Text("No addresses")
+            .accessibilityIdentifier(AccessibilityIdentifier.noAddressesText)
         Spacer()
     }
 
