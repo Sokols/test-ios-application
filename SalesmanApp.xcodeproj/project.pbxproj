@@ -12,7 +12,6 @@
 		3F7C39B22C2FE32900EDE67C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3F7C39B12C2FE32900EDE67C /* Assets.xcassets */; };
 		3F7C39B52C2FE32900EDE67C /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3F7C39B42C2FE32900EDE67C /* Preview Assets.xcassets */; };
 		3F7C39C92C2FE32900EDE67C /* SalesmanAppUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F7C39C82C2FE32900EDE67C /* SalesmanAppUITests.swift */; };
-		3F7C39CB2C2FE32900EDE67C /* SalesmanAppUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F7C39CA2C2FE32900EDE67C /* SalesmanAppUITestsLaunchTests.swift */; };
 		3F7C39D82C2FE38600EDE67C /* README.md in Resources */ = {isa = PBXBuildFile; fileRef = 3F7C39D72C2FE38600EDE67C /* README.md */; };
 		3F7C39DF2C2FEA5000EDE67C /* Localizable.xcstrings in Resources */ = {isa = PBXBuildFile; fileRef = 3F7C39DE2C2FEA5000EDE67C /* Localizable.xcstrings */; };
 		3F7C39E32C2FED5F00EDE67C /* SalesmanDTO.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F7C39E22C2FED5F00EDE67C /* SalesmanDTO.swift */; };
@@ -40,6 +39,8 @@
 		3F7C3A3D2C3060D500EDE67C /* AppDIContainer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F7C3A3C2C3060D500EDE67C /* AppDIContainer.swift */; };
 		3F7C3A412C30663900EDE67C /* SalesmanDIContainer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F7C3A402C30663900EDE67C /* SalesmanDIContainer.swift */; };
 		3F7C3A452C309D9400EDE67C /* SearchSalesmenUseCaseTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F7C3A442C309D9400EDE67C /* SearchSalesmenUseCaseTests.swift */; };
+		3F7C3A472C30B05700EDE67C /* FetchSalesmansUseCaseTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F7C3A462C30B05700EDE67C /* FetchSalesmansUseCaseTests.swift */; };
+		3F7C3A492C30B08400EDE67C /* MockedSalesmansRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F7C3A482C30B08400EDE67C /* MockedSalesmansRepository.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -68,7 +69,6 @@
 		3F7C39BA2C2FE32900EDE67C /* SalesmanAppTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SalesmanAppTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		3F7C39C42C2FE32900EDE67C /* SalesmanAppUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SalesmanAppUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		3F7C39C82C2FE32900EDE67C /* SalesmanAppUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SalesmanAppUITests.swift; sourceTree = "<group>"; };
-		3F7C39CA2C2FE32900EDE67C /* SalesmanAppUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SalesmanAppUITestsLaunchTests.swift; sourceTree = "<group>"; };
 		3F7C39D72C2FE38600EDE67C /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 		3F7C39DE2C2FEA5000EDE67C /* Localizable.xcstrings */ = {isa = PBXFileReference; lastKnownFileType = text.json.xcstrings; path = Localizable.xcstrings; sourceTree = "<group>"; };
 		3F7C39E22C2FED5F00EDE67C /* SalesmanDTO.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SalesmanDTO.swift; sourceTree = "<group>"; };
@@ -97,6 +97,8 @@
 		3F7C3A3C2C3060D500EDE67C /* AppDIContainer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDIContainer.swift; sourceTree = "<group>"; };
 		3F7C3A402C30663900EDE67C /* SalesmanDIContainer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SalesmanDIContainer.swift; sourceTree = "<group>"; };
 		3F7C3A442C309D9400EDE67C /* SearchSalesmenUseCaseTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchSalesmenUseCaseTests.swift; sourceTree = "<group>"; };
+		3F7C3A462C30B05700EDE67C /* FetchSalesmansUseCaseTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FetchSalesmansUseCaseTests.swift; sourceTree = "<group>"; };
+		3F7C3A482C30B08400EDE67C /* MockedSalesmansRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockedSalesmansRepository.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -171,6 +173,7 @@
 		3F7C39BD2C2FE32900EDE67C /* SalesmanAppTests */ = {
 			isa = PBXGroup;
 			children = (
+				3F7C3A4A2C30B08900EDE67C /* Mocks */,
 				3F7C3A422C309D5A00EDE67C /* Domain */,
 			);
 			path = SalesmanAppTests;
@@ -180,7 +183,6 @@
 			isa = PBXGroup;
 			children = (
 				3F7C39C82C2FE32900EDE67C /* SalesmanAppUITests.swift */,
-				3F7C39CA2C2FE32900EDE67C /* SalesmanAppUITestsLaunchTests.swift */,
 			);
 			path = SalesmanAppUITests;
 			sourceTree = "<group>";
@@ -427,8 +429,25 @@
 			isa = PBXGroup;
 			children = (
 				3F7C3A442C309D9400EDE67C /* SearchSalesmenUseCaseTests.swift */,
+				3F7C3A462C30B05700EDE67C /* FetchSalesmansUseCaseTests.swift */,
 			);
 			path = UseCases;
+			sourceTree = "<group>";
+		};
+		3F7C3A4A2C30B08900EDE67C /* Mocks */ = {
+			isa = PBXGroup;
+			children = (
+				3F7C3A4B2C30B08D00EDE67C /* Repositories */,
+			);
+			path = Mocks;
+			sourceTree = "<group>";
+		};
+		3F7C3A4B2C30B08D00EDE67C /* Repositories */ = {
+			isa = PBXGroup;
+			children = (
+				3F7C3A482C30B08400EDE67C /* MockedSalesmansRepository.swift */,
+			);
+			path = Repositories;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -598,6 +617,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3F7C3A492C30B08400EDE67C /* MockedSalesmansRepository.swift in Sources */,
+				3F7C3A472C30B05700EDE67C /* FetchSalesmansUseCaseTests.swift in Sources */,
 				3F7C3A452C309D9400EDE67C /* SearchSalesmenUseCaseTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -606,7 +627,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				3F7C39CB2C2FE32900EDE67C /* SalesmanAppUITestsLaunchTests.swift in Sources */,
 				3F7C39C92C2FE32900EDE67C /* SalesmanAppUITests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
