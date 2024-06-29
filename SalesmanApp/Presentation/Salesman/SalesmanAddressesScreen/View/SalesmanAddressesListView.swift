@@ -8,6 +8,7 @@
 import SwiftUI
 
 struct SalesmanAddressesListView<T: SalesmanAddressesViewModel>: View {
+    @Environment(\.dismiss) private var dismiss
     @StateObject private var viewModel: T
 
     init(viewModel: T) {
@@ -17,7 +18,7 @@ struct SalesmanAddressesListView<T: SalesmanAddressesViewModel>: View {
     var body: some View {
         VStack {
             TopNavBar(title: "Addresses") {
-                #warning("TODO: Implement navigation")
+                dismiss()
             }
             SearchBar(text: $viewModel.searchText)
             contentView

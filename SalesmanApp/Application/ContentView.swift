@@ -12,12 +12,15 @@ struct ContentView: View {
     let diContainer: AppDIContainer
 
     var body: some View {
-        #warning("TODO: Implement correct navigation and DI")
         NavigationView {
-            NavigationLink(destination: diContainer.makeSalesmanDIContainer().makeSalesmanAddresssesListView()) {
+            NavigationLink(destination: addressesView) {
                 Text("Addresses")
             }
         }
+    }
+
+    private var addressesView: some View {
+        diContainer.makeSalesmanDIContainer().makeSalesmanAddresssesListView()
     }
 }
 
