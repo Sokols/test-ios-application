@@ -8,7 +8,9 @@
 import Foundation
 
 struct Salesman: Identifiable {
-    let id: UUID = UUID()
+    typealias Identifier = String
+
+    let id: Identifier
 
     let name: String
     let areas: [String]

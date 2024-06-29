@@ -8,12 +8,16 @@
 import Foundation
 
 struct SalesmanDTO: Decodable {
+    let id: Int
+
     let name: String
     let areas: [String]
 }
 
 extension SalesmanDTO {
     func toDomain() -> Salesman {
-        return .init(name: name, areas: areas)
+        return .init(id: Salesman.Identifier(id),
+                     name: name,
+                     areas: areas)
     }
 }

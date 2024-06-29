@@ -9,9 +9,12 @@ import SwiftUI
 
 @main
 struct SalesmanApp: App {
+
+    private let diContainer = AppDIContainer()
+
     var body: some Scene {
         WindowGroup {
-            ContentView()
+            ContentView(diContainer: diContainer)
         }
     }
 }

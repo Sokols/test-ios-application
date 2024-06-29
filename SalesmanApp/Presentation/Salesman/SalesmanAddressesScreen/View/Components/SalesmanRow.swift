@@ -43,5 +43,5 @@ struct SalesmanRow: View {
 }
 
 #Preview {
-    SalesmanRow(item: Salesman(name: "Artem Titarenko", areas: ["76133", "76133", "76133", "76133", "76133", "76133", "76133", "76133", "76133", "76133", "76133", "76133", "76133", "76133"]))
+    SalesmanRow(item: SalesmanTestData.data.first!)
 }
