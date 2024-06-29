@@ -20,9 +20,6 @@
 		3F7C3A032C3000C600EDE67C /* SalesmanAddressesViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F7C3A022C3000C600EDE67C /* SalesmanAddressesViewModel.swift */; };
 		3F7C3A052C3000E100EDE67C /* SalesmanAddressesListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F7C3A042C3000E100EDE67C /* SalesmanAddressesListView.swift */; };
 		3F7C3A082C30013400EDE67C /* FetchSalesmenUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F7C3A072C30013400EDE67C /* FetchSalesmenUseCase.swift */; };
-		3F7C3A102C300C0A00EDE67C /* SF-Pro-Regular.otf in Resources */ = {isa = PBXBuildFile; fileRef = 3F7C3A0F2C300C0A00EDE67C /* SF-Pro-Regular.otf */; };
-		3F7C3A122C300C3000EDE67C /* SF-Pro-Semibold.otf in Resources */ = {isa = PBXBuildFile; fileRef = 3F7C3A112C300C3000EDE67C /* SF-Pro-Semibold.otf */; };
-		3F7C3A162C300D0F00EDE67C /* Font+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F7C3A152C300D0F00EDE67C /* Font+Extensions.swift */; };
 		3F7C3A182C300FEC00EDE67C /* SearchBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F7C3A172C300FEC00EDE67C /* SearchBar.swift */; };
 		3F7C3A1A2C30114500EDE67C /* SalesmanRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F7C3A192C30114500EDE67C /* SalesmanRow.swift */; };
 		3F7C3A1C2C30123D00EDE67C /* ContactCircleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F7C3A1B2C30123D00EDE67C /* ContactCircleView.swift */; };
@@ -44,6 +41,7 @@
 		3F7C3A512C30B3F000EDE67C /* XCUIApplication+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F7C3A502C30B3F000EDE67C /* XCUIApplication+Extensions.swift */; };
 		3F7C3A532C30B4E900EDE67C /* AccessibilityIdentifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F7C3A522C30B4E900EDE67C /* AccessibilityIdentifier.swift */; };
 		3F7C3A542C30B6CA00EDE67C /* AccessibilityIdentifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F7C3A522C30B4E900EDE67C /* AccessibilityIdentifier.swift */; };
+		3FDB54692C30CE5D00D3EFAB /* Font+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FDB54682C30CE5D00D3EFAB /* Font+Extensions.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -80,10 +78,7 @@
 		3F7C3A022C3000C600EDE67C /* SalesmanAddressesViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SalesmanAddressesViewModel.swift; sourceTree = "<group>"; };
 		3F7C3A042C3000E100EDE67C /* SalesmanAddressesListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SalesmanAddressesListView.swift; sourceTree = "<group>"; };
 		3F7C3A072C30013400EDE67C /* FetchSalesmenUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FetchSalesmenUseCase.swift; sourceTree = "<group>"; };
-		3F7C3A0F2C300C0A00EDE67C /* SF-Pro-Regular.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "SF-Pro-Regular.otf"; sourceTree = "<group>"; };
-		3F7C3A112C300C3000EDE67C /* SF-Pro-Semibold.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "SF-Pro-Semibold.otf"; sourceTree = "<group>"; };
 		3F7C3A132C300C4700EDE67C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		3F7C3A152C300D0F00EDE67C /* Font+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Font+Extensions.swift"; sourceTree = "<group>"; };
 		3F7C3A172C300FEC00EDE67C /* SearchBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchBar.swift; sourceTree = "<group>"; };
 		3F7C3A192C30114500EDE67C /* SalesmanRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SalesmanRow.swift; sourceTree = "<group>"; };
 		3F7C3A1B2C30123D00EDE67C /* ContactCircleView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContactCircleView.swift; sourceTree = "<group>"; };
@@ -104,6 +99,7 @@
 		3F7C3A4E2C30B2E100EDE67C /* SalesmanAddressListViewTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SalesmanAddressListViewTests.swift; sourceTree = "<group>"; };
 		3F7C3A502C30B3F000EDE67C /* XCUIApplication+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "XCUIApplication+Extensions.swift"; sourceTree = "<group>"; };
 		3F7C3A522C30B4E900EDE67C /* AccessibilityIdentifier.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccessibilityIdentifier.swift; sourceTree = "<group>"; };
+		3FDB54682C30CE5D00D3EFAB /* Font+Extensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Font+Extensions.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -196,7 +192,6 @@
 		3F7C39D92C2FE76B00EDE67C /* Resources */ = {
 			isa = PBXGroup;
 			children = (
-				3F7C3A0E2C300BF900EDE67C /* Fonts */,
 				3F7C39B12C2FE32900EDE67C /* Assets.xcassets */,
 				3F7C39DE2C2FEA5000EDE67C /* Localizable.xcstrings */,
 			);
@@ -354,19 +349,10 @@
 			path = Common;
 			sourceTree = "<group>";
 		};
-		3F7C3A0E2C300BF900EDE67C /* Fonts */ = {
-			isa = PBXGroup;
-			children = (
-				3F7C3A112C300C3000EDE67C /* SF-Pro-Semibold.otf */,
-				3F7C3A0F2C300C0A00EDE67C /* SF-Pro-Regular.otf */,
-			);
-			path = Fonts;
-			sourceTree = "<group>";
-		};
 		3F7C3A142C300CFF00EDE67C /* Utils */ = {
 			isa = PBXGroup;
 			children = (
-				3F7C3A152C300D0F00EDE67C /* Font+Extensions.swift */,
+				3FDB54682C30CE5D00D3EFAB /* Font+Extensions.swift */,
 				3F7C3A1F2C30157D00EDE67C /* String+Extensions.swift */,
 				3F7C3A362C30560400EDE67C /* UIApplication+Extensions.swift */,
 				3F7C3A522C30B4E900EDE67C /* AccessibilityIdentifier.swift */,
@@ -579,11 +565,9 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				3F7C3A122C300C3000EDE67C /* SF-Pro-Semibold.otf in Resources */,
 				3F7C39D82C2FE38600EDE67C /* README.md in Resources */,
 				3F7C39B52C2FE32900EDE67C /* Preview Assets.xcassets in Resources */,
 				3F7C39DF2C2FEA5000EDE67C /* Localizable.xcstrings in Resources */,
-				3F7C3A102C300C0A00EDE67C /* SF-Pro-Regular.otf in Resources */,
 				3F7C39B22C2FE32900EDE67C /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -621,6 +605,7 @@
 				3F7C3A182C300FEC00EDE67C /* SearchBar.swift in Sources */,
 				3F7C3A292C301D7500EDE67C /* SafeAreaTopColor.swift in Sources */,
 				3F7C39AE2C2FE32800EDE67C /* SalesmanApp.swift in Sources */,
+				3FDB54692C30CE5D00D3EFAB /* Font+Extensions.swift in Sources */,
 				3F7C3A2F2C30360C00EDE67C /* SalesmanQuery.swift in Sources */,
 				3F7C3A322C3038C300EDE67C /* Array+Extensions.swift in Sources */,
 				3F7C3A032C3000C600EDE67C /* SalesmanAddressesViewModel.swift in Sources */,
@@ -629,7 +614,6 @@
 				3F7C3A272C301D3C00EDE67C /* TopNavBar.swift in Sources */,
 				3F7C3A352C303A0F00EDE67C /* Publisher+Extensions.swift in Sources */,
 				3F7C39E82C2FEDCF00EDE67C /* SalesmenRepository.swift in Sources */,
-				3F7C3A162C300D0F00EDE67C /* Font+Extensions.swift in Sources */,
 				3F7C3A412C30663900EDE67C /* SalesmanDIContainer.swift in Sources */,
 				3F7C3A532C30B4E900EDE67C /* AccessibilityIdentifier.swift in Sources */,
 				3F7C3A1C2C30123D00EDE67C /* ContactCircleView.swift in Sources */,

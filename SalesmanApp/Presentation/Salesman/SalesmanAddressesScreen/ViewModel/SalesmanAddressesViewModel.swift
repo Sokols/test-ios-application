@@ -16,7 +16,7 @@ enum SalesmanAddressesViewModelState {
 }
 
 protocol SalesmanAddressesViewModelInput {
-    func loadData() async
+    func viewWillAppear() async
 }
 
 protocol SalesmanAddressesViewModelOutput: ObservableObject {
@@ -89,7 +89,8 @@ final class DefaultSalesmanAddressesViewModel: SalesmanAddressesViewModel {
 
 // MARK: - Input implementation
 extension DefaultSalesmanAddressesViewModel {
-    func loadData() async {
+    func viewWillAppear() async {
+        searchText = ""
         await fetchSalesmen()
     }
 }

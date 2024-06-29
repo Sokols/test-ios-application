@@ -4,7 +4,7 @@
 
 This is a simple app for displaying Salesmen addresses.
 App is written in SwiftUI and uses MVVM architecture.
-App provides two languages: English and German.
+App provides two languages: English and German. To switch between languages, change the language in the application settings.
 
 ## Requirements
 

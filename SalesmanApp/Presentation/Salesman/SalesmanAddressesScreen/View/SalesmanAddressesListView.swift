@@ -24,7 +24,7 @@ struct SalesmanAddressesListView<T: SalesmanAddressesViewModel>: View {
             contentView
         }
         .task {
-            await viewModel.loadData()
+            await viewModel.viewWillAppear()
         }
         .applySafeAreaTopColor(.navBarBackground)
         .navigationBarBackButtonHidden()
@@ -87,7 +87,7 @@ struct SalesmanAddressesListView_Previews: PreviewProvider {
         var searchText: String = ""
         var state: SalesmanAddressesViewModelState = .loaded(SalesmanTestData.data)
 
-        func loadData() async {}
+        func viewWillAppear() async {}
     }
 
     private static var mockViewModel: MockViewModel = MockViewModel()
