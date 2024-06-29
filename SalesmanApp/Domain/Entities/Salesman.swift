@@ -7,7 +7,9 @@
 
 import Foundation
 
-struct Salesman {
+struct Salesman: Identifiable {
+    let id: UUID = UUID()
+
     let name: String
     let areas: [String]
 }

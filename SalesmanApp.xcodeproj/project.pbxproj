@@ -23,6 +23,16 @@
 		3F7C3A032C3000C600EDE67C /* SalesmanAddressesViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F7C3A022C3000C600EDE67C /* SalesmanAddressesViewModel.swift */; };
 		3F7C3A052C3000E100EDE67C /* SalesmanAddressesListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F7C3A042C3000E100EDE67C /* SalesmanAddressesListView.swift */; };
 		3F7C3A082C30013400EDE67C /* FetchSalesmansUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F7C3A072C30013400EDE67C /* FetchSalesmansUseCase.swift */; };
+		3F7C3A102C300C0A00EDE67C /* SF-Pro-Regular.otf in Resources */ = {isa = PBXBuildFile; fileRef = 3F7C3A0F2C300C0A00EDE67C /* SF-Pro-Regular.otf */; };
+		3F7C3A122C300C3000EDE67C /* SF-Pro-Semibold.otf in Resources */ = {isa = PBXBuildFile; fileRef = 3F7C3A112C300C3000EDE67C /* SF-Pro-Semibold.otf */; };
+		3F7C3A162C300D0F00EDE67C /* Font+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F7C3A152C300D0F00EDE67C /* Font+Extensions.swift */; };
+		3F7C3A182C300FEC00EDE67C /* SearchBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F7C3A172C300FEC00EDE67C /* SearchBar.swift */; };
+		3F7C3A1A2C30114500EDE67C /* SalesmanRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F7C3A192C30114500EDE67C /* SalesmanRow.swift */; };
+		3F7C3A1C2C30123D00EDE67C /* ContactCircleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F7C3A1B2C30123D00EDE67C /* ContactCircleView.swift */; };
+		3F7C3A202C30157D00EDE67C /* String+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F7C3A1F2C30157D00EDE67C /* String+Extensions.swift */; };
+		3F7C3A232C30199D00EDE67C /* SalesmanTestData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F7C3A222C30199D00EDE67C /* SalesmanTestData.swift */; };
+		3F7C3A272C301D3C00EDE67C /* TopNavBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F7C3A262C301D3C00EDE67C /* TopNavBar.swift */; };
+		3F7C3A292C301D7500EDE67C /* SafeAreaTopColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F7C3A282C301D7500EDE67C /* SafeAreaTopColor.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -62,6 +72,17 @@
 		3F7C3A022C3000C600EDE67C /* SalesmanAddressesViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SalesmanAddressesViewModel.swift; sourceTree = "<group>"; };
 		3F7C3A042C3000E100EDE67C /* SalesmanAddressesListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SalesmanAddressesListView.swift; sourceTree = "<group>"; };
 		3F7C3A072C30013400EDE67C /* FetchSalesmansUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FetchSalesmansUseCase.swift; sourceTree = "<group>"; };
+		3F7C3A0F2C300C0A00EDE67C /* SF-Pro-Regular.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "SF-Pro-Regular.otf"; sourceTree = "<group>"; };
+		3F7C3A112C300C3000EDE67C /* SF-Pro-Semibold.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "SF-Pro-Semibold.otf"; sourceTree = "<group>"; };
+		3F7C3A132C300C4700EDE67C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		3F7C3A152C300D0F00EDE67C /* Font+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Font+Extensions.swift"; sourceTree = "<group>"; };
+		3F7C3A172C300FEC00EDE67C /* SearchBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchBar.swift; sourceTree = "<group>"; };
+		3F7C3A192C30114500EDE67C /* SalesmanRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SalesmanRow.swift; sourceTree = "<group>"; };
+		3F7C3A1B2C30123D00EDE67C /* ContactCircleView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContactCircleView.swift; sourceTree = "<group>"; };
+		3F7C3A1F2C30157D00EDE67C /* String+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+Extensions.swift"; sourceTree = "<group>"; };
+		3F7C3A222C30199D00EDE67C /* SalesmanTestData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SalesmanTestData.swift; sourceTree = "<group>"; };
+		3F7C3A262C301D3C00EDE67C /* TopNavBar.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TopNavBar.swift; sourceTree = "<group>"; };
+		3F7C3A282C301D7500EDE67C /* SafeAreaTopColor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SafeAreaTopColor.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -120,6 +141,7 @@
 				3F7C39DB2C2FE9AA00EDE67C /* Utils */,
 				3F7C39D92C2FE76B00EDE67C /* Resources */,
 				3F7C39B32C2FE32900EDE67C /* Preview Content */,
+				3F7C3A132C300C4700EDE67C /* Info.plist */,
 			);
 			path = SalesmanApp;
 			sourceTree = "<group>";
@@ -152,6 +174,7 @@
 		3F7C39D92C2FE76B00EDE67C /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				3F7C3A0E2C300BF900EDE67C /* Fonts */,
 				3F7C39B12C2FE32900EDE67C /* Assets.xcassets */,
 				3F7C39DE2C2FEA5000EDE67C /* Localizable.xcstrings */,
 			);
@@ -161,6 +184,7 @@
 		3F7C39DB2C2FE9AA00EDE67C /* Utils */ = {
 			isa = PBXGroup;
 			children = (
+				3F7C3A212C30198E00EDE67C /* TestData */,
 			);
 			path = Utils;
 			sourceTree = "<group>";
@@ -236,6 +260,8 @@
 		3F7C39FD2C2FFFE600EDE67C /* Presentation */ = {
 			isa = PBXGroup;
 			children = (
+				3F7C3A142C300CFF00EDE67C /* Utils */,
+				3F7C3A0B2C300A0200EDE67C /* Common */,
 				3F7C3A092C3004C700EDE67C /* Salesman */,
 			);
 			path = Presentation;
@@ -244,23 +270,16 @@
 		3F7C39FE2C30005600EDE67C /* SalesmanAddressesScreen */ = {
 			isa = PBXGroup;
 			children = (
-				3F7C39FF2C30008E00EDE67C /* SalesmanAddressesList */,
-			);
-			path = SalesmanAddressesScreen;
-			sourceTree = "<group>";
-		};
-		3F7C39FF2C30008E00EDE67C /* SalesmanAddressesList */ = {
-			isa = PBXGroup;
-			children = (
 				3F7C3A012C30009E00EDE67C /* ViewModel */,
 				3F7C3A002C30009900EDE67C /* View */,
 			);
-			path = SalesmanAddressesList;
+			path = SalesmanAddressesScreen;
 			sourceTree = "<group>";
 		};
 		3F7C3A002C30009900EDE67C /* View */ = {
 			isa = PBXGroup;
 			children = (
+				3F7C3A0A2C3009F300EDE67C /* Components */,
 				3F7C3A042C3000E100EDE67C /* SalesmanAddressesListView.swift */,
 			);
 			path = View;
@@ -288,6 +307,67 @@
 				3F7C39FE2C30005600EDE67C /* SalesmanAddressesScreen */,
 			);
 			path = Salesman;
+			sourceTree = "<group>";
+		};
+		3F7C3A0A2C3009F300EDE67C /* Components */ = {
+			isa = PBXGroup;
+			children = (
+				3F7C3A192C30114500EDE67C /* SalesmanRow.swift */,
+				3F7C3A1B2C30123D00EDE67C /* ContactCircleView.swift */,
+			);
+			path = Components;
+			sourceTree = "<group>";
+		};
+		3F7C3A0B2C300A0200EDE67C /* Common */ = {
+			isa = PBXGroup;
+			children = (
+				3F7C3A252C301D2300EDE67C /* Components */,
+				3F7C3A242C301D1D00EDE67C /* Modifiers */,
+			);
+			path = Common;
+			sourceTree = "<group>";
+		};
+		3F7C3A0E2C300BF900EDE67C /* Fonts */ = {
+			isa = PBXGroup;
+			children = (
+				3F7C3A112C300C3000EDE67C /* SF-Pro-Semibold.otf */,
+				3F7C3A0F2C300C0A00EDE67C /* SF-Pro-Regular.otf */,
+			);
+			path = Fonts;
+			sourceTree = "<group>";
+		};
+		3F7C3A142C300CFF00EDE67C /* Utils */ = {
+			isa = PBXGroup;
+			children = (
+				3F7C3A152C300D0F00EDE67C /* Font+Extensions.swift */,
+				3F7C3A1F2C30157D00EDE67C /* String+Extensions.swift */,
+			);
+			path = Utils;
+			sourceTree = "<group>";
+		};
+		3F7C3A212C30198E00EDE67C /* TestData */ = {
+			isa = PBXGroup;
+			children = (
+				3F7C3A222C30199D00EDE67C /* SalesmanTestData.swift */,
+			);
+			path = TestData;
+			sourceTree = "<group>";
+		};
+		3F7C3A242C301D1D00EDE67C /* Modifiers */ = {
+			isa = PBXGroup;
+			children = (
+				3F7C3A282C301D7500EDE67C /* SafeAreaTopColor.swift */,
+			);
+			path = Modifiers;
+			sourceTree = "<group>";
+		};
+		3F7C3A252C301D2300EDE67C /* Components */ = {
+			isa = PBXGroup;
+			children = (
+				3F7C3A262C301D3C00EDE67C /* TopNavBar.swift */,
+				3F7C3A172C300FEC00EDE67C /* SearchBar.swift */,
+			);
+			path = Components;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -395,9 +475,11 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3F7C3A122C300C3000EDE67C /* SF-Pro-Semibold.otf in Resources */,
 				3F7C39D82C2FE38600EDE67C /* README.md in Resources */,
 				3F7C39B52C2FE32900EDE67C /* Preview Assets.xcassets in Resources */,
 				3F7C39DF2C2FEA5000EDE67C /* Localizable.xcstrings in Resources */,
+				3F7C3A102C300C0A00EDE67C /* SF-Pro-Regular.otf in Resources */,
 				3F7C39B22C2FE32900EDE67C /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -428,10 +510,18 @@
 				3F7C39B02C2FE32800EDE67C /* ContentView.swift in Sources */,
 				3F7C39EB2C2FEE1900EDE67C /* Salesman.swift in Sources */,
 				3F7C3A052C3000E100EDE67C /* SalesmanAddressesListView.swift in Sources */,
+				3F7C3A1A2C30114500EDE67C /* SalesmanRow.swift in Sources */,
+				3F7C3A182C300FEC00EDE67C /* SearchBar.swift in Sources */,
+				3F7C3A292C301D7500EDE67C /* SafeAreaTopColor.swift in Sources */,
 				3F7C39AE2C2FE32800EDE67C /* SalesmanAppApp.swift in Sources */,
 				3F7C3A032C3000C600EDE67C /* SalesmanAddressesViewModel.swift in Sources */,
+				3F7C3A202C30157D00EDE67C /* String+Extensions.swift in Sources */,
 				3F7C39E32C2FED5F00EDE67C /* SalesmanDTO.swift in Sources */,
+				3F7C3A272C301D3C00EDE67C /* TopNavBar.swift in Sources */,
 				3F7C39E82C2FEDCF00EDE67C /* SalesmansRepository.swift in Sources */,
+				3F7C3A162C300D0F00EDE67C /* Font+Extensions.swift in Sources */,
+				3F7C3A1C2C30123D00EDE67C /* ContactCircleView.swift in Sources */,
+				3F7C3A232C30199D00EDE67C /* SalesmanTestData.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -597,6 +687,7 @@
 				DEVELOPMENT_ASSET_PATHS = "\"SalesmanApp/Preview Content\"";
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = SalesmanApp/Info.plist;
 				INFOPLIST_KEY_CFBundleDisplayName = Salesman;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
@@ -627,6 +718,7 @@
 				DEVELOPMENT_ASSET_PATHS = "\"SalesmanApp/Preview Content\"";
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = SalesmanApp/Info.plist;
 				INFOPLIST_KEY_CFBundleDisplayName = Salesman;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;

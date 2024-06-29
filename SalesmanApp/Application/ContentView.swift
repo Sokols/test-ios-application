@@ -9,12 +9,12 @@ import SwiftUI
 
 struct ContentView: View {
     var body: some View {
-        VStack {
-            Image(systemName: "globe")
-                .imageScale(.large)
-                .foregroundStyle(.tint)
+        #warning("TODO: Implement correct navigation and DI")
+        NavigationView {
+            NavigationLink(destination: SalesmanAddressesListView(viewModel: DefaultSalesmanAddressesViewModel(fetchSalesmansUseCase: DefaultFetchSalesmansUseCase(salesmansRepository: DefaultSalesmansRepository())))) {
+                Text("Addresses")
+            }
         }
-        .padding()
     }
 }
 
