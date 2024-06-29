@@ -13,17 +13,17 @@ protocol SearchSalesmenUseCase {
 
 final class DefaultSearchSalesmenUseCase {
 
-    private let salesmansRepository: SalesmansRepository
+    private let salesmenRepository: SalesmenRepository
 
-    init(salesmansRepository: SalesmansRepository) {
-        self.salesmansRepository = salesmansRepository
+    init(salesmenRepository: SalesmenRepository) {
+        self.salesmenRepository = salesmenRepository
     }
 }
 
 extension DefaultSearchSalesmenUseCase: SearchSalesmenUseCase {
     func execute(_ searchText: String) async -> Result<[Salesman], Error> {
         let query = SalesmanQuery(query: searchText)
-        let result = await salesmansRepository.fetchSalesmans(query: query)
+        let result = await salesmenRepository.fetchSalesmen(query: query)
         switch result {
         case .success(let salesmen):
             /** 
