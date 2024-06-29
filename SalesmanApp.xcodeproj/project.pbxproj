@@ -20,6 +20,9 @@
 		3F7C39E82C2FEDCF00EDE67C /* SalesmansRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F7C39E72C2FEDCF00EDE67C /* SalesmansRepository.swift */; };
 		3F7C39EB2C2FEE1900EDE67C /* Salesman.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F7C39EA2C2FEE1900EDE67C /* Salesman.swift */; };
 		3F7C39EE2C2FEE8500EDE67C /* DefaultSalesmansRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F7C39ED2C2FEE8500EDE67C /* DefaultSalesmansRepository.swift */; };
+		3F7C3A032C3000C600EDE67C /* SalesmanAddressesViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F7C3A022C3000C600EDE67C /* SalesmanAddressesViewModel.swift */; };
+		3F7C3A052C3000E100EDE67C /* SalesmanAddressesListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F7C3A042C3000E100EDE67C /* SalesmanAddressesListView.swift */; };
+		3F7C3A082C30013400EDE67C /* FetchSalesmansUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F7C3A072C30013400EDE67C /* FetchSalesmansUseCase.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -56,6 +59,9 @@
 		3F7C39E72C2FEDCF00EDE67C /* SalesmansRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SalesmansRepository.swift; sourceTree = "<group>"; };
 		3F7C39EA2C2FEE1900EDE67C /* Salesman.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Salesman.swift; sourceTree = "<group>"; };
 		3F7C39ED2C2FEE8500EDE67C /* DefaultSalesmansRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DefaultSalesmansRepository.swift; sourceTree = "<group>"; };
+		3F7C3A022C3000C600EDE67C /* SalesmanAddressesViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SalesmanAddressesViewModel.swift; sourceTree = "<group>"; };
+		3F7C3A042C3000E100EDE67C /* SalesmanAddressesListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SalesmanAddressesListView.swift; sourceTree = "<group>"; };
+		3F7C3A072C30013400EDE67C /* FetchSalesmansUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FetchSalesmansUseCase.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -107,6 +113,7 @@
 		3F7C39AC2C2FE32800EDE67C /* SalesmanApp */ = {
 			isa = PBXGroup;
 			children = (
+				3F7C39FD2C2FFFE600EDE67C /* Presentation */,
 				3F7C39E42C2FEDAF00EDE67C /* Domain */,
 				3F7C39E02C2FED0E00EDE67C /* Data */,
 				3F7C39DD2C2FEA0500EDE67C /* Application */,
@@ -187,6 +194,7 @@
 		3F7C39E42C2FEDAF00EDE67C /* Domain */ = {
 			isa = PBXGroup;
 			children = (
+				3F7C3A062C3000F500EDE67C /* UseCases */,
 				3F7C39E92C2FEE0900EDE67C /* Entities */,
 				3F7C39E52C2FEDB300EDE67C /* Interfaces */,
 			);
@@ -223,6 +231,63 @@
 				3F7C39ED2C2FEE8500EDE67C /* DefaultSalesmansRepository.swift */,
 			);
 			path = Repositories;
+			sourceTree = "<group>";
+		};
+		3F7C39FD2C2FFFE600EDE67C /* Presentation */ = {
+			isa = PBXGroup;
+			children = (
+				3F7C3A092C3004C700EDE67C /* Salesman */,
+			);
+			path = Presentation;
+			sourceTree = "<group>";
+		};
+		3F7C39FE2C30005600EDE67C /* SalesmanAddressesScreen */ = {
+			isa = PBXGroup;
+			children = (
+				3F7C39FF2C30008E00EDE67C /* SalesmanAddressesList */,
+			);
+			path = SalesmanAddressesScreen;
+			sourceTree = "<group>";
+		};
+		3F7C39FF2C30008E00EDE67C /* SalesmanAddressesList */ = {
+			isa = PBXGroup;
+			children = (
+				3F7C3A012C30009E00EDE67C /* ViewModel */,
+				3F7C3A002C30009900EDE67C /* View */,
+			);
+			path = SalesmanAddressesList;
+			sourceTree = "<group>";
+		};
+		3F7C3A002C30009900EDE67C /* View */ = {
+			isa = PBXGroup;
+			children = (
+				3F7C3A042C3000E100EDE67C /* SalesmanAddressesListView.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		3F7C3A012C30009E00EDE67C /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				3F7C3A022C3000C600EDE67C /* SalesmanAddressesViewModel.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		3F7C3A062C3000F500EDE67C /* UseCases */ = {
+			isa = PBXGroup;
+			children = (
+				3F7C3A072C30013400EDE67C /* FetchSalesmansUseCase.swift */,
+			);
+			path = UseCases;
+			sourceTree = "<group>";
+		};
+		3F7C3A092C3004C700EDE67C /* Salesman */ = {
+			isa = PBXGroup;
+			children = (
+				3F7C39FE2C30005600EDE67C /* SalesmanAddressesScreen */,
+			);
+			path = Salesman;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -359,9 +424,12 @@
 			buildActionMask = 2147483647;
 			files = (
 				3F7C39EE2C2FEE8500EDE67C /* DefaultSalesmansRepository.swift in Sources */,
+				3F7C3A082C30013400EDE67C /* FetchSalesmansUseCase.swift in Sources */,
 				3F7C39B02C2FE32800EDE67C /* ContentView.swift in Sources */,
 				3F7C39EB2C2FEE1900EDE67C /* Salesman.swift in Sources */,
+				3F7C3A052C3000E100EDE67C /* SalesmanAddressesListView.swift in Sources */,
 				3F7C39AE2C2FE32800EDE67C /* SalesmanAppApp.swift in Sources */,
+				3F7C3A032C3000C600EDE67C /* SalesmanAddressesViewModel.swift in Sources */,
 				3F7C39E32C2FED5F00EDE67C /* SalesmanDTO.swift in Sources */,
 				3F7C39E82C2FEDCF00EDE67C /* SalesmansRepository.swift in Sources */,
 			);
