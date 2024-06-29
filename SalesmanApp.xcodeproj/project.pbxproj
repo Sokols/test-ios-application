@@ -11,7 +11,6 @@
 		3F7C39B02C2FE32800EDE67C /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F7C39AF2C2FE32800EDE67C /* ContentView.swift */; };
 		3F7C39B22C2FE32900EDE67C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3F7C39B12C2FE32900EDE67C /* Assets.xcassets */; };
 		3F7C39B52C2FE32900EDE67C /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3F7C39B42C2FE32900EDE67C /* Preview Assets.xcassets */; };
-		3F7C39BF2C2FE32900EDE67C /* SalesmanAppTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F7C39BE2C2FE32900EDE67C /* SalesmanAppTests.swift */; };
 		3F7C39C92C2FE32900EDE67C /* SalesmanAppUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F7C39C82C2FE32900EDE67C /* SalesmanAppUITests.swift */; };
 		3F7C39CB2C2FE32900EDE67C /* SalesmanAppUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F7C39CA2C2FE32900EDE67C /* SalesmanAppUITestsLaunchTests.swift */; };
 		3F7C39D82C2FE38600EDE67C /* README.md in Resources */ = {isa = PBXBuildFile; fileRef = 3F7C39D72C2FE38600EDE67C /* README.md */; };
@@ -40,6 +39,7 @@
 		3F7C3A372C30560400EDE67C /* UIApplication+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F7C3A362C30560400EDE67C /* UIApplication+Extensions.swift */; };
 		3F7C3A3D2C3060D500EDE67C /* AppDIContainer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F7C3A3C2C3060D500EDE67C /* AppDIContainer.swift */; };
 		3F7C3A412C30663900EDE67C /* SalesmanDIContainer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F7C3A402C30663900EDE67C /* SalesmanDIContainer.swift */; };
+		3F7C3A452C309D9400EDE67C /* SearchSalesmenUseCaseTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F7C3A442C309D9400EDE67C /* SearchSalesmenUseCaseTests.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -66,7 +66,6 @@
 		3F7C39B12C2FE32900EDE67C /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		3F7C39B42C2FE32900EDE67C /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		3F7C39BA2C2FE32900EDE67C /* SalesmanAppTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SalesmanAppTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		3F7C39BE2C2FE32900EDE67C /* SalesmanAppTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SalesmanAppTests.swift; sourceTree = "<group>"; };
 		3F7C39C42C2FE32900EDE67C /* SalesmanAppUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SalesmanAppUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		3F7C39C82C2FE32900EDE67C /* SalesmanAppUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SalesmanAppUITests.swift; sourceTree = "<group>"; };
 		3F7C39CA2C2FE32900EDE67C /* SalesmanAppUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SalesmanAppUITestsLaunchTests.swift; sourceTree = "<group>"; };
@@ -97,6 +96,7 @@
 		3F7C3A362C30560400EDE67C /* UIApplication+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIApplication+Extensions.swift"; sourceTree = "<group>"; };
 		3F7C3A3C2C3060D500EDE67C /* AppDIContainer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDIContainer.swift; sourceTree = "<group>"; };
 		3F7C3A402C30663900EDE67C /* SalesmanDIContainer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SalesmanDIContainer.swift; sourceTree = "<group>"; };
+		3F7C3A442C309D9400EDE67C /* SearchSalesmenUseCaseTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchSalesmenUseCaseTests.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -171,7 +171,7 @@
 		3F7C39BD2C2FE32900EDE67C /* SalesmanAppTests */ = {
 			isa = PBXGroup;
 			children = (
-				3F7C39BE2C2FE32900EDE67C /* SalesmanAppTests.swift */,
+				3F7C3A422C309D5A00EDE67C /* Domain */,
 			);
 			path = SalesmanAppTests;
 			sourceTree = "<group>";
@@ -415,6 +415,22 @@
 			path = DIContainer;
 			sourceTree = "<group>";
 		};
+		3F7C3A422C309D5A00EDE67C /* Domain */ = {
+			isa = PBXGroup;
+			children = (
+				3F7C3A432C309D5F00EDE67C /* UseCases */,
+			);
+			path = Domain;
+			sourceTree = "<group>";
+		};
+		3F7C3A432C309D5F00EDE67C /* UseCases */ = {
+			isa = PBXGroup;
+			children = (
+				3F7C3A442C309D9400EDE67C /* SearchSalesmenUseCaseTests.swift */,
+			);
+			path = UseCases;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -486,6 +502,7 @@
 					};
 					3F7C39B92C2FE32900EDE67C = {
 						CreatedOnToolsVersion = 15.0.1;
+						LastSwiftMigration = 1500;
 						TestTargetID = 3F7C39A92C2FE32800EDE67C;
 					};
 					3F7C39C32C2FE32900EDE67C = {
@@ -581,7 +598,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				3F7C39BF2C2FE32900EDE67C /* SalesmanAppTests.swift in Sources */,
+				3F7C3A452C309D9400EDE67C /* SearchSalesmenUseCaseTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -796,6 +813,7 @@
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				GENERATE_INFOPLIST_FILE = YES;
@@ -804,6 +822,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.sokols.SalesmanAppTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/SalesmanApp.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/SalesmanApp";
@@ -815,6 +834,7 @@
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				GENERATE_INFOPLIST_FILE = YES;

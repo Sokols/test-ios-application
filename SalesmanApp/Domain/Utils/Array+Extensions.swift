@@ -9,9 +9,18 @@ import Foundation
 
 extension Array where Element == Salesman {
 
-    func filter(with searchText: String) -> [Salesman] {
+    /**
+     Assumptions:
+     - "searchText" cannot exceed "maxDigits" (5 by default) - returns empty array for that case.
+     - empty "searchText" returns all data
+     - "searchText" can contain only digits - returns empty array if other characters are present
+     */
+    func filter(with searchText: String, maxDigits: Int = 5) -> [Salesman] {
         if searchText.isEmpty {
             return self
+        }
+        if searchText.count > maxDigits || Int(searchText) == nil {
+            return []
         }
         return self.filter { salesman in
             for area in salesman.areas {

@@ -7,7 +7,7 @@
 
 import Foundation
 
-struct Salesman: Identifiable {
+struct Salesman: Identifiable, Hashable {
     typealias Identifier = String
 
     let id: Identifier
