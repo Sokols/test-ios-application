@@ -35,7 +35,11 @@ struct SalesmanAddressesListView<T: SalesmanAddressesViewModel>: View {
         case .loading:
             progressView
         case .loaded(let items):
-            listView(items)
+            if items.isEmpty {
+                emptyView
+            } else {
+                listView(items)
+            }
         case .failed(let error):
             errorView(error)
         default:
@@ -58,7 +62,14 @@ struct SalesmanAddressesListView<T: SalesmanAddressesViewModel>: View {
             }
             .listRowInsets(EdgeInsets())
         }
-        .listStyle(PlainListStyle())
+        .listStyle(.plain)
+    }
+
+    @ViewBuilder
+    private var emptyView: some View {
+        Spacer()
+        Text("No addresses")
+        Spacer()
     }
 
     @ViewBuilder

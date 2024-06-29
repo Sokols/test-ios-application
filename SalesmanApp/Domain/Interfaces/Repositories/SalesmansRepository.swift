@@ -8,5 +8,6 @@
 import Foundation
 
 protocol SalesmansRepository {
+    func fetchSalesmans(query: SalesmanQuery) async -> Result<[Salesman], Error>
     func fetchSalesmans() async -> Result<[Salesman], Error>
 }

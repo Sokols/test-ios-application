@@ -11,7 +11,7 @@ struct ContentView: View {
     var body: some View {
         #warning("TODO: Implement correct navigation and DI")
         NavigationView {
-            NavigationLink(destination: SalesmanAddressesListView(viewModel: DefaultSalesmanAddressesViewModel(fetchSalesmansUseCase: DefaultFetchSalesmansUseCase(salesmansRepository: DefaultSalesmansRepository())))) {
+            NavigationLink(destination: SalesmanAddressesListView(viewModel: DefaultSalesmanAddressesViewModel(fetchSalesmansUseCase: DefaultFetchSalesmansUseCase(salesmansRepository: DefaultSalesmansRepository()), searchSalesmenUseCase: DefaultSearchSalesmenUseCase(salesmansRepository: DefaultSalesmansRepository())))) {
                 Text("Addresses")
             }
         }
