@@ -16,6 +16,10 @@
 		3F7C39CB2C2FE32900EDE67C /* SalesmanAppUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F7C39CA2C2FE32900EDE67C /* SalesmanAppUITestsLaunchTests.swift */; };
 		3F7C39D82C2FE38600EDE67C /* README.md in Resources */ = {isa = PBXBuildFile; fileRef = 3F7C39D72C2FE38600EDE67C /* README.md */; };
 		3F7C39DF2C2FEA5000EDE67C /* Localizable.xcstrings in Resources */ = {isa = PBXBuildFile; fileRef = 3F7C39DE2C2FEA5000EDE67C /* Localizable.xcstrings */; };
+		3F7C39E32C2FED5F00EDE67C /* SalesmanDTO.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F7C39E22C2FED5F00EDE67C /* SalesmanDTO.swift */; };
+		3F7C39E82C2FEDCF00EDE67C /* SalesmansRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F7C39E72C2FEDCF00EDE67C /* SalesmansRepository.swift */; };
+		3F7C39EB2C2FEE1900EDE67C /* Salesman.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F7C39EA2C2FEE1900EDE67C /* Salesman.swift */; };
+		3F7C39EE2C2FEE8500EDE67C /* DefaultSalesmansRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F7C39ED2C2FEE8500EDE67C /* DefaultSalesmansRepository.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -48,6 +52,10 @@
 		3F7C39CA2C2FE32900EDE67C /* SalesmanAppUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SalesmanAppUITestsLaunchTests.swift; sourceTree = "<group>"; };
 		3F7C39D72C2FE38600EDE67C /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 		3F7C39DE2C2FEA5000EDE67C /* Localizable.xcstrings */ = {isa = PBXFileReference; lastKnownFileType = text.json.xcstrings; path = Localizable.xcstrings; sourceTree = "<group>"; };
+		3F7C39E22C2FED5F00EDE67C /* SalesmanDTO.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SalesmanDTO.swift; sourceTree = "<group>"; };
+		3F7C39E72C2FEDCF00EDE67C /* SalesmansRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SalesmansRepository.swift; sourceTree = "<group>"; };
+		3F7C39EA2C2FEE1900EDE67C /* Salesman.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Salesman.swift; sourceTree = "<group>"; };
+		3F7C39ED2C2FEE8500EDE67C /* DefaultSalesmansRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DefaultSalesmansRepository.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -99,6 +107,8 @@
 		3F7C39AC2C2FE32800EDE67C /* SalesmanApp */ = {
 			isa = PBXGroup;
 			children = (
+				3F7C39E42C2FEDAF00EDE67C /* Domain */,
+				3F7C39E02C2FED0E00EDE67C /* Data */,
 				3F7C39DD2C2FEA0500EDE67C /* Application */,
 				3F7C39DB2C2FE9AA00EDE67C /* Utils */,
 				3F7C39D92C2FE76B00EDE67C /* Resources */,
@@ -155,6 +165,64 @@
 				3F7C39AF2C2FE32800EDE67C /* ContentView.swift */,
 			);
 			path = Application;
+			sourceTree = "<group>";
+		};
+		3F7C39E02C2FED0E00EDE67C /* Data */ = {
+			isa = PBXGroup;
+			children = (
+				3F7C39EC2C2FEE7200EDE67C /* Repositories */,
+				3F7C39E12C2FED2000EDE67C /* DTOs */,
+			);
+			path = Data;
+			sourceTree = "<group>";
+		};
+		3F7C39E12C2FED2000EDE67C /* DTOs */ = {
+			isa = PBXGroup;
+			children = (
+				3F7C39E22C2FED5F00EDE67C /* SalesmanDTO.swift */,
+			);
+			path = DTOs;
+			sourceTree = "<group>";
+		};
+		3F7C39E42C2FEDAF00EDE67C /* Domain */ = {
+			isa = PBXGroup;
+			children = (
+				3F7C39E92C2FEE0900EDE67C /* Entities */,
+				3F7C39E52C2FEDB300EDE67C /* Interfaces */,
+			);
+			path = Domain;
+			sourceTree = "<group>";
+		};
+		3F7C39E52C2FEDB300EDE67C /* Interfaces */ = {
+			isa = PBXGroup;
+			children = (
+				3F7C39E62C2FEDB800EDE67C /* Repositories */,
+			);
+			path = Interfaces;
+			sourceTree = "<group>";
+		};
+		3F7C39E62C2FEDB800EDE67C /* Repositories */ = {
+			isa = PBXGroup;
+			children = (
+				3F7C39E72C2FEDCF00EDE67C /* SalesmansRepository.swift */,
+			);
+			path = Repositories;
+			sourceTree = "<group>";
+		};
+		3F7C39E92C2FEE0900EDE67C /* Entities */ = {
+			isa = PBXGroup;
+			children = (
+				3F7C39EA2C2FEE1900EDE67C /* Salesman.swift */,
+			);
+			path = Entities;
+			sourceTree = "<group>";
+		};
+		3F7C39EC2C2FEE7200EDE67C /* Repositories */ = {
+			isa = PBXGroup;
+			children = (
+				3F7C39ED2C2FEE8500EDE67C /* DefaultSalesmansRepository.swift */,
+			);
+			path = Repositories;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -290,8 +358,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3F7C39EE2C2FEE8500EDE67C /* DefaultSalesmansRepository.swift in Sources */,
 				3F7C39B02C2FE32800EDE67C /* ContentView.swift in Sources */,
+				3F7C39EB2C2FEE1900EDE67C /* Salesman.swift in Sources */,
 				3F7C39AE2C2FE32800EDE67C /* SalesmanAppApp.swift in Sources */,
+				3F7C39E32C2FED5F00EDE67C /* SalesmanDTO.swift in Sources */,
+				3F7C39E82C2FEDCF00EDE67C /* SalesmansRepository.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
