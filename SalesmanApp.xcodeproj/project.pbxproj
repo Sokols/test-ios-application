@@ -15,6 +15,14 @@
 		3F7C39C92C2FE32900EDE67C /* SalesmanAppUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F7C39C82C2FE32900EDE67C /* SalesmanAppUITests.swift */; };
 		3F7C39CB2C2FE32900EDE67C /* SalesmanAppUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F7C39CA2C2FE32900EDE67C /* SalesmanAppUITestsLaunchTests.swift */; };
 		3F7C39D82C2FE38600EDE67C /* README.md in Resources */ = {isa = PBXBuildFile; fileRef = 3F7C39D72C2FE38600EDE67C /* README.md */; };
+		3F7C39DF2C2FEA5000EDE67C /* Localizable.xcstrings in Resources */ = {isa = PBXBuildFile; fileRef = 3F7C39DE2C2FEA5000EDE67C /* Localizable.xcstrings */; };
+		3F7C39E32C2FED5F00EDE67C /* SalesmanDTO.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F7C39E22C2FED5F00EDE67C /* SalesmanDTO.swift */; };
+		3F7C39E82C2FEDCF00EDE67C /* SalesmansRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F7C39E72C2FEDCF00EDE67C /* SalesmansRepository.swift */; };
+		3F7C39EB2C2FEE1900EDE67C /* Salesman.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F7C39EA2C2FEE1900EDE67C /* Salesman.swift */; };
+		3F7C39EE2C2FEE8500EDE67C /* DefaultSalesmansRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F7C39ED2C2FEE8500EDE67C /* DefaultSalesmansRepository.swift */; };
+		3F7C3A032C3000C600EDE67C /* SalesmanAddressesViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F7C3A022C3000C600EDE67C /* SalesmanAddressesViewModel.swift */; };
+		3F7C3A052C3000E100EDE67C /* SalesmanAddressesListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F7C3A042C3000E100EDE67C /* SalesmanAddressesListView.swift */; };
+		3F7C3A082C30013400EDE67C /* FetchSalesmansUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F7C3A072C30013400EDE67C /* FetchSalesmansUseCase.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -46,6 +54,14 @@
 		3F7C39C82C2FE32900EDE67C /* SalesmanAppUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SalesmanAppUITests.swift; sourceTree = "<group>"; };
 		3F7C39CA2C2FE32900EDE67C /* SalesmanAppUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SalesmanAppUITestsLaunchTests.swift; sourceTree = "<group>"; };
 		3F7C39D72C2FE38600EDE67C /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
+		3F7C39DE2C2FEA5000EDE67C /* Localizable.xcstrings */ = {isa = PBXFileReference; lastKnownFileType = text.json.xcstrings; path = Localizable.xcstrings; sourceTree = "<group>"; };
+		3F7C39E22C2FED5F00EDE67C /* SalesmanDTO.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SalesmanDTO.swift; sourceTree = "<group>"; };
+		3F7C39E72C2FEDCF00EDE67C /* SalesmansRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SalesmansRepository.swift; sourceTree = "<group>"; };
+		3F7C39EA2C2FEE1900EDE67C /* Salesman.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Salesman.swift; sourceTree = "<group>"; };
+		3F7C39ED2C2FEE8500EDE67C /* DefaultSalesmansRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DefaultSalesmansRepository.swift; sourceTree = "<group>"; };
+		3F7C3A022C3000C600EDE67C /* SalesmanAddressesViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SalesmanAddressesViewModel.swift; sourceTree = "<group>"; };
+		3F7C3A042C3000E100EDE67C /* SalesmanAddressesListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SalesmanAddressesListView.swift; sourceTree = "<group>"; };
+		3F7C3A072C30013400EDE67C /* FetchSalesmansUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FetchSalesmansUseCase.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -97,9 +113,12 @@
 		3F7C39AC2C2FE32800EDE67C /* SalesmanApp */ = {
 			isa = PBXGroup;
 			children = (
-				3F7C39AD2C2FE32800EDE67C /* SalesmanAppApp.swift */,
-				3F7C39AF2C2FE32800EDE67C /* ContentView.swift */,
-				3F7C39B12C2FE32900EDE67C /* Assets.xcassets */,
+				3F7C39FD2C2FFFE600EDE67C /* Presentation */,
+				3F7C39E42C2FEDAF00EDE67C /* Domain */,
+				3F7C39E02C2FED0E00EDE67C /* Data */,
+				3F7C39DD2C2FEA0500EDE67C /* Application */,
+				3F7C39DB2C2FE9AA00EDE67C /* Utils */,
+				3F7C39D92C2FE76B00EDE67C /* Resources */,
 				3F7C39B32C2FE32900EDE67C /* Preview Content */,
 			);
 			path = SalesmanApp;
@@ -128,6 +147,147 @@
 				3F7C39CA2C2FE32900EDE67C /* SalesmanAppUITestsLaunchTests.swift */,
 			);
 			path = SalesmanAppUITests;
+			sourceTree = "<group>";
+		};
+		3F7C39D92C2FE76B00EDE67C /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				3F7C39B12C2FE32900EDE67C /* Assets.xcassets */,
+				3F7C39DE2C2FEA5000EDE67C /* Localizable.xcstrings */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		3F7C39DB2C2FE9AA00EDE67C /* Utils */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Utils;
+			sourceTree = "<group>";
+		};
+		3F7C39DD2C2FEA0500EDE67C /* Application */ = {
+			isa = PBXGroup;
+			children = (
+				3F7C39AD2C2FE32800EDE67C /* SalesmanAppApp.swift */,
+				3F7C39AF2C2FE32800EDE67C /* ContentView.swift */,
+			);
+			path = Application;
+			sourceTree = "<group>";
+		};
+		3F7C39E02C2FED0E00EDE67C /* Data */ = {
+			isa = PBXGroup;
+			children = (
+				3F7C39EC2C2FEE7200EDE67C /* Repositories */,
+				3F7C39E12C2FED2000EDE67C /* DTOs */,
+			);
+			path = Data;
+			sourceTree = "<group>";
+		};
+		3F7C39E12C2FED2000EDE67C /* DTOs */ = {
+			isa = PBXGroup;
+			children = (
+				3F7C39E22C2FED5F00EDE67C /* SalesmanDTO.swift */,
+			);
+			path = DTOs;
+			sourceTree = "<group>";
+		};
+		3F7C39E42C2FEDAF00EDE67C /* Domain */ = {
+			isa = PBXGroup;
+			children = (
+				3F7C3A062C3000F500EDE67C /* UseCases */,
+				3F7C39E92C2FEE0900EDE67C /* Entities */,
+				3F7C39E52C2FEDB300EDE67C /* Interfaces */,
+			);
+			path = Domain;
+			sourceTree = "<group>";
+		};
+		3F7C39E52C2FEDB300EDE67C /* Interfaces */ = {
+			isa = PBXGroup;
+			children = (
+				3F7C39E62C2FEDB800EDE67C /* Repositories */,
+			);
+			path = Interfaces;
+			sourceTree = "<group>";
+		};
+		3F7C39E62C2FEDB800EDE67C /* Repositories */ = {
+			isa = PBXGroup;
+			children = (
+				3F7C39E72C2FEDCF00EDE67C /* SalesmansRepository.swift */,
+			);
+			path = Repositories;
+			sourceTree = "<group>";
+		};
+		3F7C39E92C2FEE0900EDE67C /* Entities */ = {
+			isa = PBXGroup;
+			children = (
+				3F7C39EA2C2FEE1900EDE67C /* Salesman.swift */,
+			);
+			path = Entities;
+			sourceTree = "<group>";
+		};
+		3F7C39EC2C2FEE7200EDE67C /* Repositories */ = {
+			isa = PBXGroup;
+			children = (
+				3F7C39ED2C2FEE8500EDE67C /* DefaultSalesmansRepository.swift */,
+			);
+			path = Repositories;
+			sourceTree = "<group>";
+		};
+		3F7C39FD2C2FFFE600EDE67C /* Presentation */ = {
+			isa = PBXGroup;
+			children = (
+				3F7C3A092C3004C700EDE67C /* Salesman */,
+			);
+			path = Presentation;
+			sourceTree = "<group>";
+		};
+		3F7C39FE2C30005600EDE67C /* SalesmanAddressesScreen */ = {
+			isa = PBXGroup;
+			children = (
+				3F7C39FF2C30008E00EDE67C /* SalesmanAddressesList */,
+			);
+			path = SalesmanAddressesScreen;
+			sourceTree = "<group>";
+		};
+		3F7C39FF2C30008E00EDE67C /* SalesmanAddressesList */ = {
+			isa = PBXGroup;
+			children = (
+				3F7C3A012C30009E00EDE67C /* ViewModel */,
+				3F7C3A002C30009900EDE67C /* View */,
+			);
+			path = SalesmanAddressesList;
+			sourceTree = "<group>";
+		};
+		3F7C3A002C30009900EDE67C /* View */ = {
+			isa = PBXGroup;
+			children = (
+				3F7C3A042C3000E100EDE67C /* SalesmanAddressesListView.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		3F7C3A012C30009E00EDE67C /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				3F7C3A022C3000C600EDE67C /* SalesmanAddressesViewModel.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		3F7C3A062C3000F500EDE67C /* UseCases */ = {
+			isa = PBXGroup;
+			children = (
+				3F7C3A072C30013400EDE67C /* FetchSalesmansUseCase.swift */,
+			);
+			path = UseCases;
+			sourceTree = "<group>";
+		};
+		3F7C3A092C3004C700EDE67C /* Salesman */ = {
+			isa = PBXGroup;
+			children = (
+				3F7C39FE2C30005600EDE67C /* SalesmanAddressesScreen */,
+			);
+			path = Salesman;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -211,11 +371,12 @@
 			};
 			buildConfigurationList = 3F7C39A52C2FE32800EDE67C /* Build configuration list for PBXProject "SalesmanApp" */;
 			compatibilityVersion = "Xcode 14.0";
-			developmentRegion = en;
+			developmentRegion = de;
 			hasScannedForEncodings = 0;
 			knownRegions = (
 				en,
 				Base,
+				de,
 			);
 			mainGroup = 3F7C39A12C2FE32800EDE67C;
 			productRefGroup = 3F7C39AB2C2FE32800EDE67C /* Products */;
@@ -236,6 +397,7 @@
 			files = (
 				3F7C39D82C2FE38600EDE67C /* README.md in Resources */,
 				3F7C39B52C2FE32900EDE67C /* Preview Assets.xcassets in Resources */,
+				3F7C39DF2C2FEA5000EDE67C /* Localizable.xcstrings in Resources */,
 				3F7C39B22C2FE32900EDE67C /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -261,8 +423,15 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3F7C39EE2C2FEE8500EDE67C /* DefaultSalesmansRepository.swift in Sources */,
+				3F7C3A082C30013400EDE67C /* FetchSalesmansUseCase.swift in Sources */,
 				3F7C39B02C2FE32800EDE67C /* ContentView.swift in Sources */,
+				3F7C39EB2C2FEE1900EDE67C /* Salesman.swift in Sources */,
+				3F7C3A052C3000E100EDE67C /* SalesmanAddressesListView.swift in Sources */,
 				3F7C39AE2C2FE32800EDE67C /* SalesmanAppApp.swift in Sources */,
+				3F7C3A032C3000C600EDE67C /* SalesmanAddressesViewModel.swift in Sources */,
+				3F7C39E32C2FED5F00EDE67C /* SalesmanDTO.swift in Sources */,
+				3F7C39E82C2FEDCF00EDE67C /* SalesmansRepository.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -351,7 +520,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
 				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
@@ -408,7 +577,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
 				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
@@ -428,11 +597,13 @@
 				DEVELOPMENT_ASSET_PATHS = "\"SalesmanApp/Preview Content\"";
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_CFBundleDisplayName = Salesman;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight UIInterfaceOrientationPortrait";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -456,11 +627,13 @@
 				DEVELOPMENT_ASSET_PATHS = "\"SalesmanApp/Preview Content\"";
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_CFBundleDisplayName = Salesman;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight UIInterfaceOrientationPortrait";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -482,7 +655,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				GENERATE_INFOPLIST_FILE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = com.sokols.SalesmanAppTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -501,7 +674,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				GENERATE_INFOPLIST_FILE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = com.sokols.SalesmanAppTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
