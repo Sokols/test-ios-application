@@ -36,13 +36,16 @@ final class DefaultSalesmanAddressesViewModel: SalesmanAddressesViewModel {
     private var disposeBag = Set<AnyCancellable>()
     private let fetchSalesmansUseCase: FetchSalesmansUseCase
     private let searchSalesmenUseCase: SearchSalesmenUseCase
+    private let searchScheduler: DispatchQueue
 
     // MARK: - Init
 
     init(fetchSalesmansUseCase: FetchSalesmansUseCase,
-         searchSalesmenUseCase: SearchSalesmenUseCase) {
+         searchSalesmenUseCase: SearchSalesmenUseCase,
+         searchScheduler: DispatchQueue) {
         self.fetchSalesmansUseCase = fetchSalesmansUseCase
         self.searchSalesmenUseCase = searchSalesmenUseCase
+        self.searchScheduler = searchScheduler
         debounceSearchTextChanges()
     }
 
@@ -50,7 +53,7 @@ final class DefaultSalesmanAddressesViewModel: SalesmanAddressesViewModel {
 
     private func debounceSearchTextChanges() {
         $searchText
-            .debounce(for: 1, scheduler: RunLoop.main)
+            .debounce(for: 1, scheduler: searchScheduler)
             .sink { [weak self] text in
                 await self?.filterSalesmans(with: text)
             }

@@ -12,9 +12,9 @@ struct SalesmanTestData {
     static var data = dtoData.map { $0.toDomain() }
 
     static var dtoData = [
-        SalesmanDTO(name: "Artem Titarenko", areas: ["76133"]),
-        SalesmanDTO(name: "Bernd Schmitt", areas: ["7619*"]),
-        SalesmanDTO(name: "Chris Krapp", areas: ["762*"]),
-        SalesmanDTO(name: "Alex Uber", areas: ["86*"])
+        SalesmanDTO(id: 0, name: "Artem Titarenko", areas: ["76133"]),
+        SalesmanDTO(id: 1, name: "Bernd Schmitt", areas: ["7619*"]),
+        SalesmanDTO(id: 2, name: "Chris Krapp", areas: ["762*"]),
+        SalesmanDTO(id: 3, name: "Alex Uber", areas: ["86*"])
     ]
 }

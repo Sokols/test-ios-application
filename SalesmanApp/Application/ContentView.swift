@@ -8,16 +8,22 @@
 import SwiftUI
 
 struct ContentView: View {
+
+    let diContainer: AppDIContainer
+
     var body: some View {
-        #warning("TODO: Implement correct navigation and DI")
         NavigationView {
-            NavigationLink(destination: SalesmanAddressesListView(viewModel: DefaultSalesmanAddressesViewModel(fetchSalesmansUseCase: DefaultFetchSalesmansUseCase(salesmansRepository: DefaultSalesmansRepository()), searchSalesmenUseCase: DefaultSearchSalesmenUseCase(salesmansRepository: DefaultSalesmansRepository())))) {
+            NavigationLink(destination: addressesView) {
                 Text("Addresses")
             }
         }
     }
+
+    private var addressesView: some View {
+        diContainer.makeSalesmanDIContainer().makeSalesmanAddresssesListView()
+    }
 }
 
 #Preview {
-    ContentView()
+    ContentView(diContainer: AppDIContainer())
 }
