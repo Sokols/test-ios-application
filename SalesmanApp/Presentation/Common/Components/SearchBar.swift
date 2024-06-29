@@ -66,6 +66,7 @@ struct SearchBar: View {
                 }
             )
             .padding(.horizontal, 10)
+            .accessibilityIdentifier(AccessibilityIdentifier.searchField)
             .keyboardType(keyboardType)
             .focused($isInputActive)
             .toolbar {
@@ -75,6 +76,7 @@ struct SearchBar: View {
                     Button("Done") {
                         isInputActive = false
                     }
+                    .accessibilityIdentifier(AccessibilityIdentifier.keyboardDoneButton)
                 }
             }
     }

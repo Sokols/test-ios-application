@@ -13,9 +13,8 @@ struct ContentView: View {
 
     var body: some View {
         NavigationView {
-            NavigationLink(destination: addressesView) {
-                Text("Addresses")
-            }
+            NavigationLink("Addresses", destination: addressesView)
+                .accessibilityIdentifier(AccessibilityIdentifier.addressesButton)
         }
     }
 
