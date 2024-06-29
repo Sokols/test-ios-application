@@ -9,7 +9,6 @@ import SwiftUI
 
 struct SalesmanAddressesListView<T: SalesmanAddressesViewModel>: View {
     @StateObject private var viewModel: T
-    @State private var searchText: String = ""
 
     init(viewModel: T) {
         _viewModel = StateObject(wrappedValue: viewModel)
@@ -20,24 +19,62 @@ struct SalesmanAddressesListView<T: SalesmanAddressesViewModel>: View {
             TopNavBar(title: "Addresses") {
                 #warning("TODO: Implement navigation")
             }
-            SearchBar(text: $searchText)
-            List {
-                ForEach(viewModel.items) { item in
-                    SalesmanRow(item: item)
-                }
-                .listRowInsets(EdgeInsets())
-            }
-            .listStyle(PlainListStyle())
+            SearchBar(text: $viewModel.searchText)
+            contentView
         }
-        .applySafeAreaTopColor()
+        .task {
+            await viewModel.loadData()
+        }
+        .applySafeAreaTopColor(.navBarBackground)
         .navigationBarBackButtonHidden()
+    }
+
+    @ViewBuilder
+    private var contentView: some View {
+        switch viewModel.state {
+        case .loading:
+            progressView
+        case .loaded(let items):
+            listView(items)
+        case .failed(let error):
+            errorView(error)
+        default:
+            EmptyView()
+        }
+    }
+
+    @ViewBuilder
+    private var progressView: some View {
+        Spacer()
+        ProgressView()
+        Spacer()
+    }
+
+    @ViewBuilder
+    private func listView(_ items: [Salesman]) -> some View {
+        List {
+            ForEach(items) { item in
+                SalesmanRow(item: item)
+            }
+            .listRowInsets(EdgeInsets())
+        }
+        .listStyle(PlainListStyle())
+    }
+
+    @ViewBuilder
+    private func errorView(_ error: Error) -> some View {
+        Spacer()
+        Text(error.localizedDescription)
+        Spacer()
     }
 }
 
 struct SalesmanAddressesListView_Previews: PreviewProvider {
-    class MockViewModel: SalesmanAddressesViewModel {
-        func viewDidLoad() {}
-        var items: [Salesman] = SalesmanTestData.data
+    final class MockViewModel: SalesmanAddressesViewModel {
+        var searchText: String = ""
+        var state: SalesmanAddressesViewModelState = .loaded(SalesmanTestData.data)
+
+        func loadData() async {}
     }
 
     private static var mockViewModel: MockViewModel = MockViewModel()

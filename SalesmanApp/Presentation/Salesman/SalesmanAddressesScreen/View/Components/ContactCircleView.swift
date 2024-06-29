@@ -10,7 +10,6 @@ import SwiftUI
 struct ContactCircleView: View {
 
     let character: String?
-    let size: Int = 42
 
     var body: some View {
         ZStack {

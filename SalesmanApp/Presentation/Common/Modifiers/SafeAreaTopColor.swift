@@ -8,12 +8,14 @@
 import SwiftUI
 
 struct SafeAreaTopColor: ViewModifier {
+    let color: Color
+
     func body(content: Content) -> some View {
         ZStack(alignment: .top) {
             content
 
             GeometryReader { reader in
-                Color.navBarBackground
+                color
                     .frame(height: reader.safeAreaInsets.top, alignment: .top)
                     .ignoresSafeArea()
             }
@@ -22,7 +24,7 @@ struct SafeAreaTopColor: ViewModifier {
 }
 
 extension View {
-    func applySafeAreaTopColor() -> some View {
-        modifier(SafeAreaTopColor())
+    func applySafeAreaTopColor(_ color: Color) -> some View {
+        modifier(SafeAreaTopColor(color: color))
     }
 }
