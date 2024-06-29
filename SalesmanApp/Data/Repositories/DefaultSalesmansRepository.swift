@@ -15,15 +15,19 @@ final class DefaultSalesmansRepository {
 extension DefaultSalesmansRepository: SalesmansRepository {
 
     #warning("TODO: Replace MOCK with Realm Database implementation")
+    
+    /** 
+        Separate method for querying created in case we want to move logic for searching salesmen
+        (e.g. to support paging) to Data layer (e.g. separate API method or Database querying)
+     */
+    func fetchSalesmans(query: SalesmanQuery) async -> Result<[Salesman], Error> {
+        let data = SalesmanTestData.dtoData.map { $0.toDomain() }
+        return .success(data)
+    }
+    
     func fetchSalesmans() async -> Result<[Salesman], Error> {
-        let data = DefaultSalesmansRepository.data.map { $0.toDomain() }
+        let data = SalesmanTestData.dtoData.map { $0.toDomain() }
         return .success(data)
     }
 
-    private static var data = [
-        SalesmanDTO(name: "Artem Titarenko", areas: ["76133"]),
-        SalesmanDTO(name: "Bernd Schmitt", areas: ["7619*"]),
-        SalesmanDTO(name: "Chris Krapp", areas: ["762*"]),
-        SalesmanDTO(name: "Alex Uber", areas: ["86*"])
-    ]
 }
