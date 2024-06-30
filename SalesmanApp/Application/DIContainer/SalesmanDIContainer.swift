@@ -19,7 +19,7 @@ struct SalesmanDIContainer {
     // MARK: - ViewModel
 
     private func makeSalesmanAddressesViewModel<T: SalesmanAddressesViewModel>() -> T {
-        DefaultSalesmanAddressesViewModel(fetchSalesmansUseCase: makeFetchSalesmansUseCase(),
+        DefaultSalesmanAddressesViewModel(fetchSalesmenUseCase: makeFetchSalesmenUseCase(),
                                           searchSalesmenUseCase: makeSearchSalesmenUseCase(),
                                           searchScheduler: makeSearchScheduler()) as! T
     }
@@ -27,23 +27,23 @@ struct SalesmanDIContainer {
     // MARK: - DispatchQueue
 
     private func makeSearchScheduler() -> DispatchQueue {
-        DispatchQueue(label: "SalesmanAddressesSearchScheduler", qos: .userInteractive)
+        DispatchQueue.main
     }
 
     // MARK: - UseCase
 
-    private func makeFetchSalesmansUseCase() -> FetchSalesmansUseCase {
-        DefaultFetchSalesmansUseCase(salesmansRepository: makeSalesmansRepository())
+    private func makeFetchSalesmenUseCase() -> FetchSalesmenUseCase {
+        DefaultFetchSalesmenUseCase(salesmenRepository: makeSalesmenRepository())
     }
 
     private func makeSearchSalesmenUseCase() -> SearchSalesmenUseCase {
-        DefaultSearchSalesmenUseCase(salesmansRepository: makeSalesmansRepository())
+        DefaultSearchSalesmenUseCase(salesmenRepository: makeSalesmenRepository())
     }
 
     // MARK: - Repository
 
-    private func makeSalesmansRepository() -> SalesmansRepository {
-        DefaultSalesmansRepository()
+    private func makeSalesmenRepository() -> SalesmenRepository {
+        DefaultSalesmenRepository()
     }
 
 }

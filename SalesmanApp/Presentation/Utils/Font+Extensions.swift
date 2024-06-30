@@ -7,24 +7,14 @@
 
 import SwiftUI
 
-enum FontWeight {
-    case regular
-    case semibold
-}
-
 extension Font {
-    static let customFont: (FontWeight, CGFloat) -> Font = { fontType, size in
-        switch fontType {
-        case .regular:
-            Font.custom("SF-Pro-regular", size: size)
-        case .semibold:
-            Font.custom("SF-Pro-Semibold", size: size)
-        }
+    static let customFont: (Font.Weight, CGFloat) -> Font = { fontType, size in
+        Font.system(size: size, weight: fontType)
     }
 }
 
 extension Text {
-    func customFont(_ fontWeight: FontWeight? = .regular, _ size: CGFloat? = nil) -> Text {
+    func customFont(_ fontWeight: Font.Weight? = .regular, _ size: CGFloat? = nil) -> Text {
         return self.font(.customFont(fontWeight ?? .regular, size ?? 16))
     }
 }

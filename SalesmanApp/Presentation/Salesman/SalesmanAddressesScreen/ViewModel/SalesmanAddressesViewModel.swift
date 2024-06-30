@@ -16,7 +16,7 @@ enum SalesmanAddressesViewModelState {
 }
 
 protocol SalesmanAddressesViewModelInput {
-    func loadData() async
+    func viewWillAppear() async
 }
 
 protocol SalesmanAddressesViewModelOutput: ObservableObject {
@@ -34,16 +34,16 @@ final class DefaultSalesmanAddressesViewModel: SalesmanAddressesViewModel {
     @Published var searchText: String = ""
 
     private var disposeBag = Set<AnyCancellable>()
-    private let fetchSalesmansUseCase: FetchSalesmansUseCase
+    private let fetchSalesmenUseCase: FetchSalesmenUseCase
     private let searchSalesmenUseCase: SearchSalesmenUseCase
     private let searchScheduler: DispatchQueue
 
     // MARK: - Init
 
-    init(fetchSalesmansUseCase: FetchSalesmansUseCase,
+    init(fetchSalesmenUseCase: FetchSalesmenUseCase,
          searchSalesmenUseCase: SearchSalesmenUseCase,
          searchScheduler: DispatchQueue) {
-        self.fetchSalesmansUseCase = fetchSalesmansUseCase
+        self.fetchSalesmenUseCase = fetchSalesmenUseCase
         self.searchSalesmenUseCase = searchSalesmenUseCase
         self.searchScheduler = searchScheduler
         debounceSearchTextChanges()
@@ -55,7 +55,7 @@ final class DefaultSalesmanAddressesViewModel: SalesmanAddressesViewModel {
         $searchText
             .debounce(for: 1, scheduler: searchScheduler)
             .sink { [weak self] text in
-                await self?.filterSalesmans(with: text)
+                await self?.filterSalesmen(with: text)
             }
             .store(in: &disposeBag)
     }
@@ -63,9 +63,9 @@ final class DefaultSalesmanAddressesViewModel: SalesmanAddressesViewModel {
     // MARK: - Data operations
 
     @MainActor
-    private func fetchSalesmans() async {
+    private func fetchSalesmen() async {
         state = .loading
-        let result = await fetchSalesmansUseCase.execute()
+        let result = await fetchSalesmenUseCase.execute()
         switch result {
         case .success(let items):
             state = .loaded(items)
@@ -75,7 +75,7 @@ final class DefaultSalesmanAddressesViewModel: SalesmanAddressesViewModel {
     }
 
     @MainActor
-    private func filterSalesmans(with searchText: String) async {
+    private func filterSalesmen(with searchText: String) async {
         let result = await searchSalesmenUseCase.execute(searchText)
         switch result {
         case .success(let items):
@@ -89,7 +89,10 @@ final class DefaultSalesmanAddressesViewModel: SalesmanAddressesViewModel {
 
 // MARK: - Input implementation
 extension DefaultSalesmanAddressesViewModel {
-    func loadData() async {
-        await fetchSalesmans()
+
+    @MainActor
+    func viewWillAppear() async {
+        searchText = ""
+        await fetchSalesmen()
     }
 }

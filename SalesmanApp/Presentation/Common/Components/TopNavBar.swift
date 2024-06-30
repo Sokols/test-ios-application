@@ -9,7 +9,7 @@ import SwiftUI
 
 struct TopNavBar: View {
 
-    let title: String
+    let title: LocalizedStringKey
     let backButtonAction: () -> Void
 
     var body: some View {

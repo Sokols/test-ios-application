@@ -10,15 +10,15 @@ import XCTest
 
 final class SearchSalesmenUseCaseTests: XCTestCase {
 
-    var mockSalesmansRepository: MockedSalesmansRepository!
+    var mockSalesmenRepository: MockedSalesmenRepository!
     var useCase: DefaultSearchSalesmenUseCase!
 
     // MARK: - Set up
 
     override func setUp() {
         super.setUp()
-        mockSalesmansRepository = MockedSalesmansRepository()
-        useCase = DefaultSearchSalesmenUseCase(salesmansRepository: mockSalesmansRepository)
+        mockSalesmenRepository = MockedSalesmenRepository()
+        useCase = DefaultSearchSalesmenUseCase(salesmenRepository: mockSalesmenRepository)
     }
 
     // MARK: - Tests
@@ -26,12 +26,12 @@ final class SearchSalesmenUseCaseTests: XCTestCase {
     func testSearchSalesmenUseCase_whenRepositoryReturnsFailure_thenUseCaseReturnsError() async throws {
         // given
         let dataSet = [
-            MockedSalesmansRepository.oneFullAreaSalesman,
-            MockedSalesmansRepository.justAsteriskAreaSalesman,
-            MockedSalesmansRepository.noAreasSalesman
+            MockedSalesmenRepository.oneFullAreaSalesman,
+            MockedSalesmenRepository.justAsteriskAreaSalesman,
+            MockedSalesmenRepository.noAreasSalesman
         ]
-        mockSalesmansRepository.setDataSet(dataSet)
-        mockSalesmansRepository.setResult(.failure(MockedSalesmansRepository.SalesmansRepositoryTestError.failedFetching))
+        mockSalesmenRepository.setDataSet(dataSet)
+        mockSalesmenRepository.setResult(.failure(MockedSalesmenRepository.SalesmenRepositoryTestError.failedFetching))
 
         // when
         let searchText = "7"
@@ -42,14 +42,14 @@ final class SearchSalesmenUseCaseTests: XCTestCase {
         case .success:
             XCTFail("Expected failure but got success")
         case .failure(let error):
-            XCTAssertEqual(error.localizedDescription, MockedSalesmansRepository.SalesmansRepositoryTestError.failedFetching.localizedDescription)
+            XCTAssertEqual(error.localizedDescription, MockedSalesmenRepository.SalesmenRepositoryTestError.failedFetching.localizedDescription)
         }
     }
 
     func testSearchSalesmenUseCase_whenThereIsNoSalesmen_thenUseCaseReturnsSuccessWithEmptyList() async throws {
         // given
         let dataSet: [Salesman] = []
-        mockSalesmansRepository.setDataSet(dataSet)
+        mockSalesmenRepository.setDataSet(dataSet)
 
         // when
         let searchText = "7"
@@ -63,11 +63,11 @@ final class SearchSalesmenUseCaseTests: XCTestCase {
     func testSearchSalesmenUseCase_whenSearchTextIsEmpty_thenAllSalesmenAreReturned() async throws {
         // given
         let dataSet = [
-            MockedSalesmansRepository.oneFullAreaSalesman,
-            MockedSalesmansRepository.justAsteriskAreaSalesman,
-            MockedSalesmansRepository.noAreasSalesman
+            MockedSalesmenRepository.oneFullAreaSalesman,
+            MockedSalesmenRepository.justAsteriskAreaSalesman,
+            MockedSalesmenRepository.noAreasSalesman
         ]
-        mockSalesmansRepository.setDataSet(dataSet)
+        mockSalesmenRepository.setDataSet(dataSet)
 
         // when
         let searchText = ""
@@ -81,11 +81,11 @@ final class SearchSalesmenUseCaseTests: XCTestCase {
     func testSearchSalesmenUseCase_whenThereIsOneSalesmanWithNoAreasAndSearchTextIsPresent_thenThisSalesmanWithNoAresIsNotReturned() async throws {
         // given
         let dataSet = [
-            MockedSalesmansRepository.oneFullAreaSalesman,
-            MockedSalesmansRepository.justAsteriskAreaSalesman,
-            MockedSalesmansRepository.noAreasSalesman
+            MockedSalesmenRepository.oneFullAreaSalesman,
+            MockedSalesmenRepository.justAsteriskAreaSalesman,
+            MockedSalesmenRepository.noAreasSalesman
         ]
-        mockSalesmansRepository.setDataSet(dataSet)
+        mockSalesmenRepository.setDataSet(dataSet)
 
         // when
         let searchText = "7"
@@ -93,17 +93,17 @@ final class SearchSalesmenUseCaseTests: XCTestCase {
 
         // then
         let salesmen = try result.get()
-        XCTAssertFalse(salesmen.contains(where: { $0.id == MockedSalesmansRepository.noAreasSalesman.id }))
+        XCTAssertFalse(salesmen.contains(where: { $0.id == MockedSalesmenRepository.noAreasSalesman.id }))
     }
 
     func testSearchSalesmenUseCase_whenThereIsSalesmanWithJustAsteriskAndSearchTextDoesNotMatchAnythingElse_thenOnlySalesmanWithAsteriskIsReturned() async throws {
         // given
         let dataSet = [
-            MockedSalesmansRepository.oneFullAreaSalesman,
-            MockedSalesmansRepository.justAsteriskAreaSalesman,
-            MockedSalesmansRepository.noAreasSalesman
+            MockedSalesmenRepository.oneFullAreaSalesman,
+            MockedSalesmenRepository.justAsteriskAreaSalesman,
+            MockedSalesmenRepository.noAreasSalesman
         ]
-        mockSalesmansRepository.setDataSet(dataSet)
+        mockSalesmenRepository.setDataSet(dataSet)
 
         // when
         let searchText = "1234"
@@ -112,18 +112,18 @@ final class SearchSalesmenUseCaseTests: XCTestCase {
         // then
         let salesmen = try result.get()
         XCTAssertTrue(salesmen.count == 1)
-        XCTAssertTrue(salesmen.contains(where: { $0.id == MockedSalesmansRepository.justAsteriskAreaSalesman.id }))
+        XCTAssertTrue(salesmen.contains(where: { $0.id == MockedSalesmenRepository.justAsteriskAreaSalesman.id }))
     }
 
     func testSearchSalesmenUseCase_whenSearchTextMatchesTwoSalesmenWithAsterisks_thenOnlyTheseSalesmenAreReturned() async throws {
         // given
         let dataSet = [
-            MockedSalesmansRepository.oneFullAreaSalesman,
-            MockedSalesmansRepository.oneAsteriskAreaSalesman,
-            MockedSalesmansRepository.twoAsteriskAreasSalesman,
-            MockedSalesmansRepository.noAreasSalesman
+            MockedSalesmenRepository.oneFullAreaSalesman,
+            MockedSalesmenRepository.oneAsteriskAreaSalesman,
+            MockedSalesmenRepository.twoAsteriskAreasSalesman,
+            MockedSalesmenRepository.noAreasSalesman
         ]
-        mockSalesmansRepository.setDataSet(dataSet)
+        mockSalesmenRepository.setDataSet(dataSet)
 
         // when
         let searchText = "7436"
@@ -132,19 +132,19 @@ final class SearchSalesmenUseCaseTests: XCTestCase {
         // then
         let salesmen = try result.get()
         XCTAssertTrue(salesmen.count == 2)
-        XCTAssertTrue(salesmen.contains(where: { $0.id == MockedSalesmansRepository.oneAsteriskAreaSalesman.id }))
-        XCTAssertTrue(salesmen.contains(where: { $0.id == MockedSalesmansRepository.twoAsteriskAreasSalesman.id }))
+        XCTAssertTrue(salesmen.contains(where: { $0.id == MockedSalesmenRepository.oneAsteriskAreaSalesman.id }))
+        XCTAssertTrue(salesmen.contains(where: { $0.id == MockedSalesmenRepository.twoAsteriskAreasSalesman.id }))
     }
 
     func testSearchSalesmenUseCase_whenSearchTextPresentsFullPostalcodeThatMatchesTwoSalesmen_thenOnlyTheseSalesmenAreReturned() async throws {
         // given
         let dataSet = [
-            MockedSalesmansRepository.oneFullAreaSalesman,
-            MockedSalesmansRepository.oneAsteriskAreaSalesman,
-            MockedSalesmansRepository.twoAsteriskAreasSalesman,
-            MockedSalesmansRepository.noAreasSalesman
+            MockedSalesmenRepository.oneFullAreaSalesman,
+            MockedSalesmenRepository.oneAsteriskAreaSalesman,
+            MockedSalesmenRepository.twoAsteriskAreasSalesman,
+            MockedSalesmenRepository.noAreasSalesman
         ]
-        mockSalesmansRepository.setDataSet(dataSet)
+        mockSalesmenRepository.setDataSet(dataSet)
 
         // when
         let searchText = "76543"
@@ -153,18 +153,18 @@ final class SearchSalesmenUseCaseTests: XCTestCase {
         // then
         let salesmen = try result.get()
         XCTAssertTrue(salesmen.count == 2)
-        XCTAssertTrue(salesmen.contains(where: { $0.id == MockedSalesmansRepository.oneFullAreaSalesman.id }))
-        XCTAssertTrue(salesmen.contains(where: { $0.id == MockedSalesmansRepository.twoAsteriskAreasSalesman.id }))
+        XCTAssertTrue(salesmen.contains(where: { $0.id == MockedSalesmenRepository.oneFullAreaSalesman.id }))
+        XCTAssertTrue(salesmen.contains(where: { $0.id == MockedSalesmenRepository.twoAsteriskAreasSalesman.id }))
     }
 
     func testSearchSalesmenUseCase_whenSearchTextExceedsMaxDigits_thenEmptyListIsReturned() async throws {
         // given
         let dataSet = [
-            MockedSalesmansRepository.oneAsteriskAreaSalesman,
-            MockedSalesmansRepository.justAsteriskAreaSalesman,
-            MockedSalesmansRepository.noAreasSalesman
+            MockedSalesmenRepository.oneAsteriskAreaSalesman,
+            MockedSalesmenRepository.justAsteriskAreaSalesman,
+            MockedSalesmenRepository.noAreasSalesman
         ]
-        mockSalesmansRepository.setDataSet(dataSet)
+        mockSalesmenRepository.setDataSet(dataSet)
 
         // when
         let searchText = "7654321"
@@ -178,11 +178,11 @@ final class SearchSalesmenUseCaseTests: XCTestCase {
     func testSearchSalesmenUseCase_whenSearchTextContainsCharacters_thenEmptyListIsReturned() async throws {
         // given
         let dataSet = [
-            MockedSalesmansRepository.oneAsteriskAreaSalesman,
-            MockedSalesmansRepository.justAsteriskAreaSalesman,
-            MockedSalesmansRepository.noAreasSalesman
+            MockedSalesmenRepository.oneAsteriskAreaSalesman,
+            MockedSalesmenRepository.justAsteriskAreaSalesman,
+            MockedSalesmenRepository.noAreasSalesman
         ]
-        mockSalesmansRepository.setDataSet(dataSet)
+        mockSalesmenRepository.setDataSet(dataSet)
 
         // when
         let searchText = "7436a"

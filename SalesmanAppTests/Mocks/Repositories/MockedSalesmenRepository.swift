@@ -1,5 +1,5 @@
 //
-//  MockedSalesmansRepository.swift
+//  MockedSalesmenRepository.swift
 //  SalesmanAppTests
 //
 //  Created by Igor SOKÓŁ on 29/06/2024.
@@ -7,7 +7,7 @@
 
 @testable import SalesmanApp
 
-final class MockedSalesmansRepository: SalesmansRepository {
+final class MockedSalesmenRepository: SalesmenRepository {
 
     private(set) var dataSet: [Salesman] = []
     private(set) var result: Result<[Salesman], Error>? = nil
@@ -24,17 +24,17 @@ final class MockedSalesmansRepository: SalesmansRepository {
 
     // MARK: - Overridden
 
-    func fetchSalesmans(query: SalesmanQuery) async -> Result<[Salesman], Error> {
+    func fetchSalesmen(query: SalesmanQuery) async -> Result<[Salesman], Error> {
         return result ?? .success(dataSet)
     }
 
-    func fetchSalesmans() async -> Result<[Salesman], Error> {
+    func fetchSalesmen() async -> Result<[Salesman], Error> {
         return result ?? .success(dataSet)
     }
 
     // MARK: - Mocks
 
-    enum SalesmansRepositoryTestError: Error {
+    enum SalesmenRepositoryTestError: Error {
         case failedFetching
     }
 
