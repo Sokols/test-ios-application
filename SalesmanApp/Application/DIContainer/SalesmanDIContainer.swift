@@ -27,7 +27,7 @@ struct SalesmanDIContainer {
     // MARK: - DispatchQueue
 
     private func makeSearchScheduler() -> DispatchQueue {
-        DispatchQueue(label: "SalesmanAddressesSearchScheduler", qos: .userInteractive)
+        DispatchQueue.main
     }
 
     // MARK: - UseCase

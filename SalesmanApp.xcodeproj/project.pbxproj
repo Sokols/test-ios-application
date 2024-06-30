@@ -31,7 +31,6 @@
 		3F7C3A2F2C30360C00EDE67C /* SalesmanQuery.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F7C3A2E2C30360C00EDE67C /* SalesmanQuery.swift */; };
 		3F7C3A322C3038C300EDE67C /* Array+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F7C3A312C3038C300EDE67C /* Array+Extensions.swift */; };
 		3F7C3A352C303A0F00EDE67C /* Publisher+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F7C3A342C303A0F00EDE67C /* Publisher+Extensions.swift */; };
-		3F7C3A372C30560400EDE67C /* UIApplication+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F7C3A362C30560400EDE67C /* UIApplication+Extensions.swift */; };
 		3F7C3A3D2C3060D500EDE67C /* AppDIContainer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F7C3A3C2C3060D500EDE67C /* AppDIContainer.swift */; };
 		3F7C3A412C30663900EDE67C /* SalesmanDIContainer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F7C3A402C30663900EDE67C /* SalesmanDIContainer.swift */; };
 		3F7C3A452C309D9400EDE67C /* SearchSalesmenUseCaseTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F7C3A442C309D9400EDE67C /* SearchSalesmenUseCaseTests.swift */; };
@@ -90,7 +89,6 @@
 		3F7C3A2E2C30360C00EDE67C /* SalesmanQuery.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SalesmanQuery.swift; sourceTree = "<group>"; };
 		3F7C3A312C3038C300EDE67C /* Array+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Array+Extensions.swift"; sourceTree = "<group>"; };
 		3F7C3A342C303A0F00EDE67C /* Publisher+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Publisher+Extensions.swift"; sourceTree = "<group>"; };
-		3F7C3A362C30560400EDE67C /* UIApplication+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIApplication+Extensions.swift"; sourceTree = "<group>"; };
 		3F7C3A3C2C3060D500EDE67C /* AppDIContainer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDIContainer.swift; sourceTree = "<group>"; };
 		3F7C3A402C30663900EDE67C /* SalesmanDIContainer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SalesmanDIContainer.swift; sourceTree = "<group>"; };
 		3F7C3A442C309D9400EDE67C /* SearchSalesmenUseCaseTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchSalesmenUseCaseTests.swift; sourceTree = "<group>"; };
@@ -354,7 +352,6 @@
 			children = (
 				3FDB54682C30CE5D00D3EFAB /* Font+Extensions.swift */,
 				3F7C3A1F2C30157D00EDE67C /* String+Extensions.swift */,
-				3F7C3A362C30560400EDE67C /* UIApplication+Extensions.swift */,
 				3F7C3A522C30B4E900EDE67C /* AccessibilityIdentifier.swift */,
 			);
 			path = Utils;
@@ -593,7 +590,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				3F7C3A372C30560400EDE67C /* UIApplication+Extensions.swift in Sources */,
 				3F7C39EE2C2FEE8500EDE67C /* DefaultSalesmenRepository.swift in Sources */,
 				3F7C3A082C30013400EDE67C /* FetchSalesmenUseCase.swift in Sources */,
 				3F7C39B02C2FE32800EDE67C /* ContentView.swift in Sources */,

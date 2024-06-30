@@ -89,6 +89,8 @@ final class DefaultSalesmanAddressesViewModel: SalesmanAddressesViewModel {
 
 // MARK: - Input implementation
 extension DefaultSalesmanAddressesViewModel {
+
+    @MainActor
     func viewWillAppear() async {
         searchText = ""
         await fetchSalesmen()
