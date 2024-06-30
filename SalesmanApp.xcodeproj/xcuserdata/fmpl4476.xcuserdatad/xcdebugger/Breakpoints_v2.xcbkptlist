@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Bucket
+   uuid = "E75C3A8C-727D-4F11-9612-E371F7009B42"
+   type = "1"
+   version = "2.0">
+   <Breakpoints>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "0FDF6DDD-AECE-42C0-9C9F-9D3C8CD12549"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "SalesmanApp/Presentation/Common/Components/SearchBar.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "21"
+            endingLineNumber = "21"
+            landmarkName = "unknown"
+            landmarkType = "0">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "D50A79D9-2F33-41B1-8694-2BF897283AAB"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "SalesmanApp/Presentation/Salesman/SalesmanAddressesScreen/ViewModel/SalesmanAddressesViewModel.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "79"
+            endingLineNumber = "79"
+            landmarkName = "filterSalesmen(with:)"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  uuid = "D50A79D9-2F33-41B1-8694-2BF897283AAB - e5f1bbe86cd253c8"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "(1) suspend resume partial function for SalesmanApp.DefaultSalesmanAddressesViewModel.filterSalesmen(with: Swift.String) async -&gt; ()"
+                  moduleName = "SalesmanApp"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/fmpl4476/Desktop/dev/private/SalesmanApp/SalesmanApp/Presentation/Salesman/SalesmanAddressesScreen/ViewModel/SalesmanAddressesViewModel.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "79"
+                  endingLineNumber = "79"
+                  offsetFromSymbolStart = "80">
+               </Location>
+               <Location
+                  uuid = "D50A79D9-2F33-41B1-8694-2BF897283AAB - b2a6ca70155edce9"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "(2) await resume partial function for SalesmanApp.DefaultSalesmanAddressesViewModel.filterSalesmen(with: Swift.String) async -&gt; ()"
+                  moduleName = "SalesmanApp"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/fmpl4476/Desktop/dev/private/SalesmanApp/SalesmanApp/Presentation/Salesman/SalesmanAddressesScreen/ViewModel/SalesmanAddressesViewModel.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "79"
+                  endingLineNumber = "79"
+                  offsetFromSymbolStart = "44">
+               </Location>
+               <Location
+                  uuid = "D50A79D9-2F33-41B1-8694-2BF897283AAB - 511af9936867dfea"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "(3) suspend resume partial function for SalesmanApp.DefaultSalesmanAddressesViewModel.filterSalesmen(with: Swift.String) async -&gt; ()"
+                  moduleName = "SalesmanApp"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/fmpl4476/Desktop/dev/private/SalesmanApp/SalesmanApp/Presentation/Salesman/SalesmanAddressesScreen/ViewModel/SalesmanAddressesViewModel.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "79"
+                  endingLineNumber = "79"
+                  offsetFromSymbolStart = "76">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+   </Breakpoints>
+</Bucket>

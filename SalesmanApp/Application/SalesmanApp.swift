@@ -1,5 +1,5 @@
 //
-//  SalesmanAppApp.swift
+//  SalesmanApp.swift
 //  SalesmanApp
 //
 //  Created by Igor SOKÓŁ on 29/06/2024.
@@ -8,10 +8,13 @@
 import SwiftUI
 
 @main
-struct SalesmanAppApp: App {
+struct SalesmanApp: App {
+
+    private let diContainer = AppDIContainer()
+
     var body: some Scene {
         WindowGroup {
-            ContentView()
+            ContentView(diContainer: diContainer)
         }
     }
 }
